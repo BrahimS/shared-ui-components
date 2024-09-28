@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 
-import NxWelcome from './nx-welcome';
-
 const StyledApp = styled.div`
-  // Your style here
+	// Your style here
 `;
 
 export function App() {
-  return (
-    <StyledApp>
-      <NxWelcome title="uikit" />
-    </StyledApp>
-  );
+	return (
+		<StyledApp>
+			<h1>Hello there</h1>
+		</StyledApp>
+	);
 }
 
 export default App;

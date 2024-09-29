@@ -5,9 +5,9 @@ import { AppWrapper, GlobalStyle, theme } from '@react-monorepo/shared-ui';
 import { MainContent } from './components/Main/MainContent';
 import { Footer } from './components/Footer';
 
-export function App(): React.ReactNode {
+function App(): React.ReactElement {
 	return (
-		<ThemeProvider theme={theme}>
+		<ThemeProvider theme={theme ?? {}}>
 			<GlobalStyle />
 			<AppWrapper>
 				<Header />

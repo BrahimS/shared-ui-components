@@ -2,7 +2,16 @@
 	"name": "@react-monorepo/source",
 	"version": "0.0.0",
 	"license": "MIT",
-	"scripts": {},
+	"scripts": {
+		"start": "nx serve",
+		"build": "nx build",
+		"test": " jest",
+		"lint": "nx run-many --target lint",
+		"typecheck": "tsc --project tsconfig.base.json --noEmit",
+		"e2e": "nx e2e",
+		"storybook:uikit": "nx storybook uikit",
+		"build-storybook": "build-storybook"
+	},
 	"private": true,
 	"dependencies": {
 		"react": "18.3.1",

@@ -70,71 +70,14 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  body {
-    font-family: ${({ theme }) => theme.typography.fontFamily};
-    font-size: ${({ theme }) => theme.typography.fontSize.body};
-    line-height: ${({ theme }) => theme.typography.lineHeight.body};
+ body {
+    font-family: 'Poppins', sans-serif;
     background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text.primary};
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    color: ${({ theme }) => theme.colors.text};
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4 {
-    line-height: ${({ theme }) => theme.typography.lineHeight.heading};
-    margin-bottom: ${({ theme }) => theme.spacing.sm};
-    font-weight: ${({ theme }) => theme.typography.fontWeight.bold};
-  }
 
-  h1 {
-    font-size: ${({ theme }) => theme.typography.fontSize.h1};
-  }
-
-  h2 {
-    font-size: ${({ theme }) => theme.typography.fontSize.h2};
-  }
-
-  h3 {
-    font-size: ${({ theme }) => theme.typography.fontSize.h3};
-  }
-
-  h4 {
-    font-size: ${({ theme }) => theme.typography.fontSize.h4};
-  }
-
-  a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.colors.primary};
-    transition: color 0.2s ease-in-out;
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.accent};
-    }
-  }
-
-  button {
-    font-family: ${({ theme }) => theme.typography.fontFamily};
-    cursor: pointer;
-    border: none;
-  }
-
-  input, textarea, button {
-    font-family: inherit;
-    font-size: inherit;
-  }
-
-  /* Utility classes */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 ${({ theme }) => theme.spacing.md};
-  }
-
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
 `;

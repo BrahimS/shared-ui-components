@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { theme } from './theme';
+import { Button } from '@radix-ui/themes';
 
 export const AppWrapper = styled.div`
 	display: block;
@@ -47,16 +49,14 @@ export const FooterWrapper = styled.footer`
 	border: 1px solid #333;
 `;
 
-export const Button = styled.button`
-	background: ${({ theme }) => theme.buttons.primary.background};
-	color: ${({ theme }) => theme.buttons.primary.color};
-	padding: ${({ theme }) => theme.buttons.primary.padding};
-	border-radius: ${({ theme }) => theme.buttons.primary.borderRadius};
-	font-weight: ${({ theme }) => theme.buttons.primary.fontWeight};
-	border: ${({ theme }) => theme.buttons.primary.border};
-
+export const DefaultButton = styled(Button)`
+	background-color: ${theme.colors.primary};
+	color: ${theme.colors.white};
+	border-color: ${(props) => props.theme.colors.primary};
 	&:hover {
-		background: ${({ theme }) => theme.buttons.primary.hover.background};
+		background-color: ${(props) => props.theme.colors.accent};
+		border-color: ${(props) => props.theme.colors.accent};
+		color: ${(props) => props.theme.colors.primary};
 	}
 `;
 

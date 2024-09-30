@@ -1,20 +1,51 @@
 import { DefaultTheme } from 'styled-components';
 
+const colorScheme = {
+	blue: '#2185D0',
+	teal: '#00B5AD',
+	green: '#21BA45',
+	olive: '#B5CC18',
+	yellow: '#FBBD08',
+	orange: '#F2711C',
+	red: '#DB2828',
+	violet: '#6435C9',
+	purple: '#A333C8',
+	brown: '#A5673F',
+	pink: '#E03997',
+	grey: '#767676',
+	charcoal: '#43425D',
+	black: '#1B1C1D',
+	white: '#F7F7F7',
+};
+
 export const theme: DefaultTheme = {
 	// Color Palette
 	colors: {
-		primary: '#FF6F61', // Fashionable coral
-		secondary: '#252525', // Dark charcoal
-		accent: '#FFD700', // Gold accent for luxury feel
-		background: '#F7F7F7', // Light grey for background
+		blue: colorScheme.blue,
+		teal: colorScheme.teal,
+		green: colorScheme.green,
+		olive: colorScheme.olive,
+		yellow: colorScheme.yellow,
+		orange: colorScheme.orange,
+		red: colorScheme.red,
+		violet: colorScheme.violet,
+		purple: colorScheme.purple,
+		brown: colorScheme.brown,
+		pink: colorScheme.pink,
+		grey: colorScheme.grey,
+		charcoal: colorScheme.charcoal,
+		black: colorScheme.black,
+		white: colorScheme.white,
+		primary: colorScheme.charcoal,
+		secondary: '#43425D', // Dark charcoal
+		accent: colorScheme.yellow,
+		background: colorScheme.white,
+
 		text: {
 			primary: '#252525', // Dark for readability
 			secondary: '#6F6F6F', // Muted grey for secondary info
 			accent: '#FF6F61', // Coral for emphasis
 		},
-		border: '#E0E0E0', // Light grey borders
-		success: '#4CAF50', // Green for success messages
-		error: '#F44336', // Red for error messages
 	},
 
 	// Typography
@@ -64,33 +95,6 @@ export const theme: DefaultTheme = {
 		light: '0 1px 3px rgba(0, 0, 0, 0.1)',
 		medium: '0 3px 6px rgba(0, 0, 0, 0.1)',
 		large: '0 10px 20px rgba(0, 0, 0, 0.2)',
-	},
-
-	// Button styles
-	buttons: {
-		primary: {
-			background: '#FF6F61',
-			color: '#FFFFFF',
-			border: 'none',
-			borderRadius: '8px',
-			padding: '0.75rem 1.5rem',
-			fontWeight: '500',
-			hover: {
-				background: '#FF5A4E',
-			},
-		},
-		secondary: {
-			background: '#FFFFFF',
-			color: '#252525',
-			border: '1px solid #252525',
-			borderRadius: '8px',
-			padding: '0.75rem 1.5rem',
-			fontWeight: '500',
-			hover: {
-				background: '#252525',
-				color: '#FFFFFF',
-			},
-		},
 	},
 
 	// Input styles

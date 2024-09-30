@@ -4,6 +4,23 @@ import 'styled-components';
 declare module 'styled-components' {
 	export interface DefaultTheme {
 		colors: {
+			blue: string;
+			teal: string;
+			red: string;
+			green: string;
+			olive: string;
+			yellow: string;
+			yellow: string;
+			orange: string;
+			red: string;
+			violet: string;
+			purple: string;
+			brown: string;
+			pink: string;
+			grey: string;
+			charcoal: string;
+			black: string;
+			white: string;
 			primary: string;
 			secondary: string;
 			accent: string;
@@ -13,9 +30,6 @@ declare module 'styled-components' {
 				secondary: string;
 				accent: string;
 			};
-			border: string;
-			success: string;
-			error: string;
 		};
 		typography: {
 			fontFamily: string;

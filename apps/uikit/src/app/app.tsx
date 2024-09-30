@@ -1,4 +1,7 @@
 import React from 'react';
+import { Button, Flex, Theme } from '@radix-ui/themes';
+
+import { DefaultButton, theme } from '@react-monorepo/shared-ui';
 import { ThemeProvider } from 'styled-components';
 import {
 	AppWrapper,
@@ -6,7 +9,6 @@ import {
 	GlobalStyle,
 	Header,
 	MainContent,
-	theme,
 } from '@react-monorepo/shared-ui';
 
 function App(): React.ReactElement {
@@ -14,9 +16,12 @@ function App(): React.ReactElement {
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<AppWrapper>
-				<Header />
-				<MainContent />
-				<Footer />
+				<Header>This is the header</Header>
+				<MainContent>This is the main content</MainContent>
+
+				<DefaultButton>Edit profile</DefaultButton>
+
+				<Footer>This is the footer</Footer>
 			</AppWrapper>
 		</ThemeProvider>
 	);

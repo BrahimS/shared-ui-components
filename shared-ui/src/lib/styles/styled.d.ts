@@ -72,31 +72,7 @@ declare module 'styled-components' {
 			medium: string;
 			large: string;
 		};
-		buttons: {
-			primary: {
-				background: string;
-				color: string;
-				border: string;
-				borderRadius: string;
-				padding: string;
-				fontWeight: string | number;
-				hover: {
-					background: string;
-				};
-			};
-			secondary: {
-				background: string;
-				color: string;
-				border: string;
-				borderRadius: string;
-				padding: string;
-				fontWeight: string | number;
-				hover: {
-					background: string;
-					color: string;
-				};
-			};
-		};
+
 		input: {
 			background: string;
 			border: string;

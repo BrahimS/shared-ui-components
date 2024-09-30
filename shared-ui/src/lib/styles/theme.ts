@@ -51,10 +51,12 @@ export const theme: DefaultTheme = {
 
 	// Breakpoints for responsiveness
 	breakpoints: {
-		mobile: '576px',
-		tablet: '768px',
-		laptop: '1024px',
-		desktop: '1200px',
+		initial: '0px',
+		mobile: '520px',
+		tablet: '1024px',
+		laptop: '1280px',
+		desktop: '1640px',
+		tv: '1920px',
 	},
 
 	// Shadows

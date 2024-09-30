@@ -46,10 +46,12 @@ declare module 'styled-components' {
 			xl: string;
 		};
 		breakpoints: {
+			initial: string;
 			mobile: string;
 			tablet: string;
 			laptop: string;
 			desktop: string;
+			tv: string;
 		};
 		shadows: {
 			light: string;

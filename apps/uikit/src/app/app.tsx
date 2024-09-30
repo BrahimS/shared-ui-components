@@ -1,27 +1,27 @@
 import React from 'react';
-import { Button, Flex, Theme } from '@radix-ui/themes';
-
-import { DefaultButton, theme } from '@react-monorepo/shared-ui';
+import { theme } from '@react-monorepo/shared-ui';
 import { ThemeProvider } from 'styled-components';
-import {
-	AppWrapper,
-	Footer,
-	GlobalStyle,
-	Header,
-	MainContent,
-} from '@react-monorepo/shared-ui';
+import { AppWrapper, GlobalStyle } from '@react-monorepo/shared-ui';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import Styleguide from './pages/styleguide';
+import ProdutCard from './pages/ProdutCard';
+import LoginForm from './pages/LoginForm';
+import NoMatch from './pages/NoMatch';
 
 function App(): React.ReactElement {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<AppWrapper>
-				<Header>This is the header</Header>
-				<MainContent>This is the main content</MainContent>
-
-				<DefaultButton>Edit profile</DefaultButton>
-
-				<Footer>This is the footer</Footer>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route path="/" element={<Styleguide />} />
+						<Route path="/login-form" element={<LoginForm />} />
+						<Route path="/product-card" element={<ProdutCard />} />
+						<Route path="*" element={<NoMatch />} />
+					</Route>
+				</Routes>
 			</AppWrapper>
 		</ThemeProvider>
 	);

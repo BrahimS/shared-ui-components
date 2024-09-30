@@ -12,6 +12,7 @@ export const AppWrapper = styled.div`
 
 export const HeaderWrapper = styled.header`
 	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
@@ -21,6 +22,29 @@ export const HeaderWrapper = styled.header`
 	min-height: 120px;
 	width: 100%;
 	border: 1px solid #333;
+`;
+
+export const MenuWrapper = styled.nav`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	background-color: transparent;
+	color: ${theme.colors.primary};
+	width: 100%;
+`;
+
+export const MenuList = styled.ul`
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	& li {
+		margin: 0 ${theme.spacing.sm};
+	}
 `;
 
 export const MainWrapper = styled.main`

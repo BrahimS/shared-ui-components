@@ -1,6 +1,12 @@
 import React from 'react';
 import { MainWrapper } from '../styles';
 
-export const MainContent = (): React.ReactElement => {
-	return <MainWrapper>page body</MainWrapper>;
+interface MainContentProps {
+	children: React.ReactNode;
+}
+
+export const MainContent = ({
+	children,
+}: MainContentProps): React.ReactNode => {
+	return <MainWrapper>{children}</MainWrapper>;
 };

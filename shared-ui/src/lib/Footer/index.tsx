@@ -1,6 +1,10 @@
 import React from 'react';
 import { FooterWrapper } from '../styles';
 
-export const Footer = (): React.ReactElement => {
-	return <FooterWrapper>This is a footer</FooterWrapper>;
+interface FooterProps {
+	children: React.ReactNode;
+}
+
+export const Footer = ({ children }: FooterProps): React.ReactNode => {
+	return <FooterWrapper>{children}</FooterWrapper>;
 };

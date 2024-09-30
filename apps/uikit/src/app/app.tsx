@@ -7,7 +7,7 @@ import { Footer } from './components/Footer';
 
 function App(): React.ReactElement {
 	return (
-		<ThemeProvider theme={theme ?? {}}>
+		<ThemeProvider theme={theme}>
 			<GlobalStyle />
 			<AppWrapper>
 				<Header />

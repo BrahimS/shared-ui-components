@@ -38,17 +38,6 @@ export const MenuWrapper = styled.nav`
 	width: 100%;
 `;
 
-export const MenuList = styled.ul`
-	list-style: none;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	& li {
-		margin: 0 ${theme.spacing.sm};
-	}
-`;
-
 export const MainWrapper = styled.main`
 	display: flex;
 	justify-content: center;

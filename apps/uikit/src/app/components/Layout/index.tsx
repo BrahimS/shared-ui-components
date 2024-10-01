@@ -17,7 +17,7 @@ export const Layout = (): React.ReactNode => {
 			<MainContent>
 				<Outlet />
 			</MainContent>
-			<Footer>This is the footer</Footer>
+			<Footer> ©{new Date().getFullYear()} - Made with love by BS</Footer>
 		</AppWrapper>
 	);
 };

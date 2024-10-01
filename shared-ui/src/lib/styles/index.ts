@@ -9,7 +9,6 @@ export const AppWrapper = styled.div`
 	margin: 0 auto;
 	max-width: 1280px;
 	height: 100vh;
-	border: solid 1px black;
 `;
 
 export const HeaderWrapper = styled.header`
@@ -23,7 +22,6 @@ export const HeaderWrapper = styled.header`
 	color: #000000;
 	min-height: 120px;
 	width: 100%;
-	border: 1px solid #333;
 `;
 
 export const MenuWrapper = styled.nav`
@@ -46,7 +44,6 @@ export const MainWrapper = styled.main`
 	padding: 0.5rem 1rem;
 	background-color: #ffffff;
 	color: #000000;
-	border: 1px solid #333;
 `;
 
 export const MenubarRootWrapper = styled(Menubar.Root)`
@@ -111,7 +108,6 @@ export const FooterWrapper = styled.footer`
 	color: #000000;
 	min-height: 120px;
 	width: 100%;
-	border: 1px solid #333;
 `;
 
 export const DefaultButton = styled(Button)`

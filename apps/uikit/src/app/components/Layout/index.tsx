@@ -8,7 +8,7 @@ import {
 	MainContent,
 } from '@react-monorepo/shared-ui';
 
-export const Layout = () => {
+export const Layout = (): React.ReactNode => {
 	return (
 		<AppWrapper>
 			<Header>

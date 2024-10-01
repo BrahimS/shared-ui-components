@@ -1,6 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
+import * as Menubar from '@radix-ui/react-menubar';
+import { Box, Button } from '@radix-ui/themes';
 import { theme } from './theme';
-import { Button } from '@radix-ui/themes';
 
 export const AppWrapper = styled.div`
 	display: block;
@@ -55,9 +57,59 @@ export const MainWrapper = styled.main`
 	padding: 0.5rem 1rem;
 	background-color: #ffffff;
 	color: #000000;
-	height: 100%;
-	width: 100%;
 	border: 1px solid #333;
+`;
+
+export const MenubarRootWrapper = styled(Menubar.Root)`
+	display: flex;
+	background-color: white;
+	padding: 4px;
+	border-radius: 6px;
+`;
+
+export const MenubarTriggerWrapper = styled(Menubar.Trigger)`
+	all: unset;
+	padding: 8px 12px;
+	outline: none;
+	user-select: none;
+	font-weight: 500;
+	line-height: 1;
+	border-radius: 4px;
+	color: ${({ theme }) => theme.colors.primary};
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2px;
+
+	&:hover {
+		background-color: ${({ theme }) => theme.colors.yellow};
+	}
+`;
+
+export const MenuLinkWrapper = styled(Link)`
+	color: inherit;
+	text-decoration: none;
+`;
+
+export const BoxElement = styled(Box)<{ $isBig?: boolean }>`
+	background-color: ${theme.colors.white};
+	color: ${theme.colors.black};
+	border-radius: ${theme.spacing.xs};
+	padding: ${theme.spacing.md};
+	min-height: 100px;
+	min-width: 100px;
+	box-sizing: 'border-box';
+	${(props) =>
+		props.$isBig &&
+		css`
+			min-height: 500px;
+			min-width: 400px;
+			background: transparent;
+			padding: ${theme.spacing.md};
+			color: ${theme.colors.primary};
+			box-shadow: ${theme.shadows.medium};
+		`}
 `;
 
 export const FooterWrapper = styled.footer`
@@ -89,7 +141,6 @@ export const Card = styled.div`
 	border-radius: ${({ theme }) => theme.card.borderRadius};
 	box-shadow: ${({ theme }) => theme.card.boxShadow};
 	padding: ${({ theme }) => theme.card.padding};
-
 	&:hover {
 		box-shadow: ${({ theme }) => theme.card.hover.boxShadow};
 	}

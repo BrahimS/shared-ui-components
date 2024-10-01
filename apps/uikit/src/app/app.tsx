@@ -4,10 +4,10 @@ import { ThemeProvider } from 'styled-components';
 import { AppWrapper, GlobalStyle } from '@react-monorepo/shared-ui';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import Styleguide from './pages/styleguide';
 import ProdutCard from './pages/ProdutCard';
 import LoginForm from './pages/LoginForm';
 import NoMatch from './pages/NoMatch';
+import Styleguide from './pages/Styleguide';
 
 function App(): React.ReactElement {
 	return (

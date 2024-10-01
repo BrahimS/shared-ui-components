@@ -1,19 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { NavBar } from '@react-monorepo/shared-ui';
+import * as Menubar from '@radix-ui/react-menubar';
+import {
+	MenubarRootWrapper,
+	MenubarTriggerWrapper,
+	MenuLinkWrapper,
+} from '@react-monorepo/shared-ui';
+
+interface MenuProps {
+	to: string;
+	children: React.ReactNode;
+}
+
+const MenuItem = ({ to, children }: MenuProps) => (
+	<Menubar.Menu>
+		<MenubarTriggerWrapper>
+			<MenuLinkWrapper to={to}>{children}</MenuLinkWrapper>
+		</MenubarTriggerWrapper>
+	</Menubar.Menu>
+);
 
 export const Menu = (): React.ReactNode => {
 	return (
-		<NavBar>
-			<li>
-				<Link to="/"> Style guide</Link>
-			</li>
-			<li>
-				<Link to="/product-card"> Login Form</Link>
-			</li>
-			<li>
-				<Link to="/login-form"> Produt Card</Link>
-			</li>
-		</NavBar>
+		<MenubarRootWrapper>
+			<MenuItem to="/">Style Guide</MenuItem>
+			<MenuItem to="/login-form">Login Form</MenuItem>
+			<MenuItem to="/product-card">Product Card</MenuItem>
+		</MenubarRootWrapper>
 	);
 };

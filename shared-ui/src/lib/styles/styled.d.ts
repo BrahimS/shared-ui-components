@@ -21,6 +21,7 @@ declare module 'styled-components' {
 			charcoal: string;
 			black: string;
 			white: string;
+			cream: string;
 			primary: string;
 			secondary: string;
 			accent: string;

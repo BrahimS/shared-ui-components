@@ -15,7 +15,8 @@ const colorScheme = {
 	grey: '#767676',
 	charcoal: '#43425D',
 	black: '#1B1C1D',
-	white: '#F7F7F7',
+	cream: '#F7F7F7',
+	white: 'FFFFFF',
 };
 
 export const theme: DefaultTheme = {
@@ -36,6 +37,7 @@ export const theme: DefaultTheme = {
 		charcoal: colorScheme.charcoal,
 		black: colorScheme.black,
 		white: colorScheme.white,
+		cream: colorScheme.cream,
 		primary: colorScheme.charcoal,
 		secondary: '#43425D', // Dark charcoal
 		accent: colorScheme.yellow,

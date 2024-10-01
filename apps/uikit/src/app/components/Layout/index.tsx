@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Menu } from '../Menu';
 import {
-	AppWrapper,
+	ContainerWrapper,
 	Footer,
 	Header,
 	MainContent,
@@ -10,7 +10,7 @@ import {
 
 export const Layout = (): React.ReactNode => {
 	return (
-		<AppWrapper>
+		<ContainerWrapper>
 			<Header>
 				<Menu />
 			</Header>
@@ -18,6 +18,6 @@ export const Layout = (): React.ReactNode => {
 				<Outlet />
 			</MainContent>
 			<Footer> ©{new Date().getFullYear()} - Made with love by BS</Footer>
-		</AppWrapper>
+		</ContainerWrapper>
 	);
 };

@@ -1,14 +1,12 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as Menubar from '@radix-ui/react-menubar';
-import { Box, Button } from '@radix-ui/themes';
+import { Box, Button, Container } from '@radix-ui/themes';
 import { theme } from './theme';
 
-export const AppWrapper = styled.div`
-	display: block;
-	margin: 0 auto;
-	max-width: 1280px;
-	height: 100vh;
+export const ContainerWrapper = styled(Container)`
+	background-color: ${theme.colors.white};
+	color: ${theme.colors.primary};
 `;
 
 export const HeaderWrapper = styled.header`
@@ -18,22 +16,11 @@ export const HeaderWrapper = styled.header`
 	justify-items: center;
 	align-items: center;
 	padding: 0.5rem 1rem;
-	background-color: #ffffff;
-	color: #000000;
-	min-height: 120px;
-	width: 100%;
-`;
-
-export const MenuWrapper = styled.nav`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	justify-items: center;
-	align-items: center;
-	padding: 0.5rem 1rem;
-	background-color: transparent;
+	background-color: ${theme.colors.white};
 	color: ${theme.colors.primary};
+	min-height: 80px;
 	width: 100%;
+	box-shadow: ${theme.shadows.medium};
 `;
 
 export const MainWrapper = styled.main`
@@ -42,8 +29,8 @@ export const MainWrapper = styled.main`
 	justify-items: center;
 	align-items: center;
 	padding: 0.5rem 1rem;
-	background-color: #ffffff;
-	color: #000000;
+	color: ${theme.colors.primary};
+	background-color: ${theme.colors.cream};
 `;
 
 export const MenubarRootWrapper = styled(Menubar.Root)`
@@ -54,6 +41,9 @@ export const MenubarRootWrapper = styled(Menubar.Root)`
 `;
 
 export const MenubarTriggerWrapper = styled(Menubar.Trigger)`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	all: unset;
 	padding: 8px 12px;
 	outline: none;
@@ -61,12 +51,9 @@ export const MenubarTriggerWrapper = styled(Menubar.Trigger)`
 	font-weight: 500;
 	line-height: 1;
 	border-radius: 4px;
-	color: ${({ theme }) => theme.colors.primary};
+	color: ${theme.colors.primary};
 	font-size: 14px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2px;
+	gap: 3px;
 
 	&:hover {
 		background-color: ${({ theme }) => theme.colors.yellow};

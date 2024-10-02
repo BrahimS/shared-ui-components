@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 // CSS Reset based on Eric Meyer's Reset
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
   /* Reset */
   /* http://meyerweb.com/eric/tools/css/reset/
      v2.0 | 20110126

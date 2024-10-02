@@ -29,8 +29,9 @@ export const MainWrapper = styled.main`
 	justify-items: center;
 	align-items: center;
 	padding: 0.5rem 1rem;
+	height: calc(100vh - 120px);
 	color: ${theme.colors.primary};
-	background-color: ${theme.colors.cream};
+	background-color: transparent;
 `;
 
 export const MenubarRootWrapper = styled(Menubar.Root)`
@@ -93,7 +94,7 @@ export const FooterWrapper = styled.footer`
 	padding: 0.5rem 1rem;
 	background-color: #ffffff;
 	color: #000000;
-	min-height: 120px;
+	max-height: 60px;
 	width: 100%;
 `;
 

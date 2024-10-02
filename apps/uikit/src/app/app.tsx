@@ -9,7 +9,7 @@ import LoginForm from './pages/LoginForm';
 import NoMatch from './pages/NoMatch';
 import Styleguide from './pages/Styleguide';
 
-function App(): React.ReactElement {
+function App(): React.ReactNode {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />

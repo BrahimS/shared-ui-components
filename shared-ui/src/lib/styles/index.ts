@@ -10,6 +10,54 @@ export interface ContainerWrapperProps {
 	padding?: keyof typeof theme.spacing;
 	style?: React.CSSProperties;
 }
+export interface FlexBoxProps {
+	children: React.ReactNode;
+	direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
+	align?: 'start' | 'center' | 'end' | 'stretch' | 'baseline';
+	justify?: 'start' | 'center' | 'end' | 'between';
+	wrap?: 'nowrap' | 'wrap' | 'wrap-reverse';
+	gap?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
+	style?: React.CSSProperties;
+}
+export const FlexWrapper = styled.div<FlexBoxProps>`
+	display: flex;
+	flex-direction: ${(props) => props.direction || 'row'};
+	align-items: ${(props) => {
+		switch (props.align) {
+			case 'start':
+				return 'flex-start';
+			case 'end':
+				return 'flex-end';
+			case 'center':
+				return 'center';
+			case 'stretch':
+				return 'stretch';
+			case 'baseline':
+				return 'baseline';
+			default:
+				return 'stretch';
+		}
+	}};
+	justify-content: ${(props) => {
+		switch (props.justify) {
+			case 'start':
+				return 'flex-start';
+			case 'end':
+				return 'flex-end';
+			case 'center':
+				return 'center';
+			case 'between':
+				return 'space-between';
+			default:
+				return 'flex-start';
+		}
+	}};
+	flex-wrap: ${(props) => props.wrap || 'nowrap'};
+	gap: ${(props) => {
+		const gapSize = parseInt(props.gap || '0', 10);
+		return `${gapSize * 4}px`;
+	}};
+`;
 
 export const ContainerWrapper = styled.div<ContainerWrapperProps>`
 	margin: 0 auto;

@@ -102,7 +102,7 @@ export const MainWrapper = styled.main`
 	justify-content: space-between;
 	justify-items: flex-start;
 	align-items: flex-start;
-	padding: 2rem 1rem;
+	padding: 3rem 1rem;
 	height: calc(100vh - 116px);
 	color: ${theme.colors.primary};
 	background-color: transparent;
@@ -161,7 +161,7 @@ export const SmallSquare = styled.div`
 	transform: ${theme.logo.rotation.small} ${theme.logo.translate};
 	background: ${theme.logo.color};
 `;
-export const BoxElement = styled(Box)<{ $isBig?: boolean }>`
+export const BoxElement = styled(Box)<{ $isbig?: boolean }>`
 	background-color: ${theme.colors.white};
 	color: ${theme.colors.black};
 	border-radius: ${theme.spacing.xs};
@@ -170,7 +170,7 @@ export const BoxElement = styled(Box)<{ $isBig?: boolean }>`
 	min-width: 100px;
 	box-sizing: 'border-box';
 	${(props) =>
-		props.$isBig &&
+		props.$isbig &&
 		css`
 			min-height: 500px;
 			min-width: 400px;

@@ -103,15 +103,15 @@ export const theme: DefaultTheme = {
 		large: '0 10px 20px rgba(0, 0, 0, 0.2)',
 	},
 	logo: {
-		color: colorScheme.charcoal,
+		color: colorScheme.yellow,
 		size: {
 			small: '30px',
 			large: '45px',
 		},
 		border: {
 			type: 'solid',
-			width: '3px',
-			color: colorScheme.charcoal,
+			width: '6px',
+			color: 'white',
 			radius: '4px',
 		},
 		rotation: {

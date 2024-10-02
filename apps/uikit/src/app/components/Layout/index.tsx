@@ -33,8 +33,8 @@ export const Layout = (): React.ReactNode => {
 				<MainContent>
 					<Outlet />
 				</MainContent>
-				<Footer> ©{new Date().getFullYear()} - Made with love by BS</Footer>
 			</ContainerWrapper>
+			<Footer> ©{new Date().getFullYear()} - Made with love by BS</Footer>
 		</>
 	);
 };

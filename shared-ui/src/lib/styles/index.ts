@@ -51,11 +51,11 @@ export const HeaderWrapper = styled.header`
 
 export const MainWrapper = styled.main`
 	display: flex;
-	justify-content: center;
-	justify-items: center;
-	align-items: center;
-	padding: 0.5rem 1rem;
-	height: calc(100vh - 120px);
+	justify-content: space-between;
+	justify-items: flex-start;
+	align-items: flex-start;
+	padding: 2rem 1rem;
+	height: calc(100vh - 116px);
 	color: ${theme.colors.primary};
 	background-color: transparent;
 `;
@@ -94,14 +94,14 @@ export const MenuLinkWrapper = styled(Link)`
 export const LogoWrapper = styled.div`
 	display: flex;
 `;
-
 export const BigSquare = styled.div`
 	height: ${theme.logo.size.large};
 	width: ${theme.logo.size.large};
-	border: ${theme.logo.border.type} ${theme.logo.border.width};
+	border: ${theme.logo.border.type};
 	border-color: ${theme.logo.border.color};
 	border-radius: ${theme.logo.border.radius};
 	transform: ${theme.logo.rotation.large};
+	background: ${theme.logo.color};
 `;
 
 export const SmallSquare = styled.div`
@@ -111,6 +111,7 @@ export const SmallSquare = styled.div`
 	border-color: ${theme.logo.border.color};
 	border-radius: ${theme.logo.border.radius};
 	transform: ${theme.logo.rotation.small} ${theme.logo.translate};
+	background: ${theme.logo.color};
 `;
 export const BoxElement = styled(Box)<{ $isBig?: boolean }>`
 	background-color: ${theme.colors.white};
@@ -131,15 +132,12 @@ export const BoxElement = styled(Box)<{ $isBig?: boolean }>`
 			box-shadow: ${theme.shadows.medium};
 		`}
 `;
-
 export const FooterWrapper = styled.footer`
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	justify-items: center;
 	align-items: center;
-	padding: 0.5rem 1rem;
-	background-color: #ffffff;
-	color: #000000;
+	background-color: ${theme.colors.yellow};
 	max-height: 60px;
 	width: 100%;
 `;

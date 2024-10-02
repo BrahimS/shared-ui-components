@@ -1,5 +1,6 @@
 import React from 'react';
-import { MenubarRootWrapper, MenuItem } from '@react-monorepo/shared-ui';
+import { MenubarRootWrapper } from '../styles';
+import { MenuItem } from '../Navigation/MenuItem';
 
 export const Menu = (): React.ReactNode => {
 	return (

@@ -1,14 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 
-// CSS Reset based on Eric Meyer's Reset
 export const GlobalStyle = createGlobalStyle`
-
-  /* Reset */
-  /* http://meyerweb.com/eric/tools/css/reset/
-     v2.0 | 20110126
-     License: none (public domain)
-  */
-
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -71,13 +64,36 @@ export const GlobalStyle = createGlobalStyle`
   }
 
  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+   background-color: ${({ theme }) => theme.colors.background};
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   color: ${({ theme }) => theme.colors.text};
+   font-weight: ${theme.typography.fontWeight.regular};
+   line-height: ${theme.typography.lineHeight.body};
+   font-size: ${theme.typography.fontSize.body};
+   font-family: 'Poppins', sans-serif;
   }
 
+  h1, h2, h3, h4, h5 {
+    font-weight: ${theme.typography.fontWeight.bold};
+    line-height: ${theme.typography.lineHeight.heading};
+    color: ${theme.colors.text.primary};
+    font-family: ${theme.typography.fontFamily};
+  }
 
+  h1 {
+    font-size: ${theme.typography.fontSize.h1};
+  }
+  h2 {
+    font-size: ${theme.typography.fontSize.h2};
+  }
+  h3 {
+    font-size: ${theme.typography.fontSize.h3};
+  }
+  h4 {
+    font-size: ${theme.typography.fontSize.h4};
+  }
+  h5 {
+    font-size: ${theme.typography.fontSize.h5};
+  }
 `;

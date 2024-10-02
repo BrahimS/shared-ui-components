@@ -39,17 +39,16 @@ export const theme: DefaultTheme = {
 		white: colorScheme.white,
 		cream: colorScheme.cream,
 		primary: colorScheme.charcoal,
-		secondary: '#43425D', // Dark charcoal
+		secondary: '#3d38b5', // Dark charcoal
 		accent: colorScheme.yellow,
 		background: colorScheme.white,
 
 		text: {
-			primary: '#252525', // Dark for readability
+			primary: colorScheme.charcoal, // Dark for readability
 			secondary: '#6F6F6F', // Muted grey for secondary info
 			accent: '#FF6F61', // Coral for emphasis
 		},
 	},
-
 	// Typography
 	typography: {
 		fontFamily: `'Poppins', sans-serif`, // Fashion-friendly font
@@ -58,6 +57,7 @@ export const theme: DefaultTheme = {
 			h2: '2.5rem',
 			h3: '2rem',
 			h4: '1.5rem',
+			h5: '1.2rem',
 			body: '1rem', // Default text size
 			small: '0.875rem', // Small text
 		},
@@ -72,7 +72,6 @@ export const theme: DefaultTheme = {
 			heading: '1.3', // Tighter for headings
 		},
 	},
-
 	// Spacing
 	spacing: {
 		xs: '0.5rem',
@@ -81,7 +80,13 @@ export const theme: DefaultTheme = {
 		lg: '2rem',
 		xl: '3rem',
 	},
-
+	sizes: {
+		containerSM: '640px',
+		containerMD: '768px',
+		containerLG: '1024px',
+		containerXL: '1280px',
+		containerFULL: '100vw',
+	},
 	// Breakpoints for responsiveness
 	breakpoints: {
 		initial: '0px',
@@ -91,14 +96,30 @@ export const theme: DefaultTheme = {
 		desktop: '1640px',
 		tv: '1920px',
 	},
-
 	// Shadows
 	shadows: {
 		light: '0 1px 3px rgba(0, 0, 0, 0.1)',
 		medium: '0 3px 6px rgba(0, 0, 0, 0.1)',
 		large: '0 10px 20px rgba(0, 0, 0, 0.2)',
 	},
-
+	logo: {
+		color: colorScheme.charcoal,
+		size: {
+			small: '30px',
+			large: '45px',
+		},
+		border: {
+			type: 'solid',
+			width: '3px',
+			color: colorScheme.charcoal,
+			radius: '4px',
+		},
+		rotation: {
+			small: 'rotate(45deg)',
+			large: 'rotate(45deg)',
+		},
+		translate: 'translate(-3px, 13px)',
+	},
 	// Input styles
 	input: {
 		background: '#FFFFFF',

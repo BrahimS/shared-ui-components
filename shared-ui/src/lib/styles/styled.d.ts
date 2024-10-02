@@ -39,6 +39,7 @@ declare module 'styled-components' {
 				h2: string;
 				h3: string;
 				h4: string;
+				h5: string;
 				body: string;
 				small: string;
 			};
@@ -60,6 +61,13 @@ declare module 'styled-components' {
 			lg: string;
 			xl: string;
 		};
+		sizes: {
+			containerSM: string;
+			containerMD: string;
+			containerLG: string;
+			containerXL: string;
+			containerFULL: string;
+		};
 		breakpoints: {
 			initial: string;
 			mobile: string;
@@ -74,6 +82,24 @@ declare module 'styled-components' {
 			large: string;
 		};
 
+		logo: {
+			color: string;
+			size: {
+				small: string;
+				large: string;
+			};
+			border: {
+				type: string;
+				width: string;
+				color: string;
+				radius: string;
+			};
+			rotation: {
+				small: string;
+				large: string;
+			};
+			translate: string;
+		};
 		input: {
 			background: string;
 			border: string;

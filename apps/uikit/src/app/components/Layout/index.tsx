@@ -1,14 +1,24 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Menu } from '../Menu';
+
 import {
+	BigSquare,
 	ContainerWrapper,
 	Footer,
 	Head,
 	Header,
+	LogoWrapper,
 	MainContent,
+	Menu,
+	SmallSquare,
 } from '@react-monorepo/shared-ui';
 
+const Logo = (): React.ReactNode => (
+	<LogoWrapper>
+		<BigSquare />
+		<SmallSquare />
+	</LogoWrapper>
+);
 export const Layout = (): React.ReactNode => {
 	return (
 		<>
@@ -18,10 +28,8 @@ export const Layout = (): React.ReactNode => {
 				keywords="ui, kit, library"
 			/>
 
-			<ContainerWrapper>
-				<Header>
-					<Menu />
-				</Header>
+			<Header logo={<Logo />} children={<Menu />}></Header>
+			<ContainerWrapper size="full">
 				<MainContent>
 					<Outlet />
 				</MainContent>

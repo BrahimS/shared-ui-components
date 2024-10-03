@@ -122,8 +122,8 @@ export const FlexWrapper = styled.div<FlexBoxProps>`
 export const ContainerWrapper = styled.div<ContainerWrapperProps>`
 	margin: 0 auto;
 	width: 100%;
-	padding-left: ${({ theme, padding }) => theme.spacing[padding || 'md']};
-	padding-right: ${({ theme, padding }) => theme.spacing[padding || 'md']};
+	padding: 0;
+	box-sizing: border-box;
 	${({ theme, size }) => {
 		switch (size) {
 			case 'sm':

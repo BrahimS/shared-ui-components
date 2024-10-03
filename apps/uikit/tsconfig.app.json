@@ -28,6 +28,7 @@
 		"src/**/*.jsx",
 		"src/**/*.ts",
 		"src/**/*.tsx",
-		"../../shared-ui/src/lib/Main/MainContent.tsx"
+		"../../shared-ui/src/lib/Main/MainContent.tsx",
+		"../../shared-ui/src/setupTests.ts"
 	]
 }

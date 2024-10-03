@@ -2,6 +2,7 @@ export * from './lib/Head/index';
 export * from './lib/styles/styled.d';
 export * from './lib/Menu/index';
 export * from './lib/Grid/FlexBox';
+export * from './lib/Grid/Box';
 export * from './lib/Grid/ContainerWrapper';
 export * from './lib/styles';
 export * from './lib/styles/GlobalStyle';

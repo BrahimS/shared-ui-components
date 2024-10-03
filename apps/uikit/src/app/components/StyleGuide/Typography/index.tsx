@@ -8,6 +8,7 @@ import {
 	TagUnderlinedText,
 	TypographySectionWrapper,
 } from '@react-monorepo/shared-ui';
+import { Link } from 'react-router-dom';
 
 export const TypographyExample: React.FC<{
 	tag: string;
@@ -28,7 +29,17 @@ export const TypographyExample: React.FC<{
 );
 
 export const TypographySection: React.FC = () => (
-	<TypographySectionWrapper $isbig={true}>
+	<TypographySectionWrapper $isbig={false}>
+		<TagUnderlinedText>Typography</TagUnderlinedText>
+		<ul style={{ marginBottom: '1.5rem' }}>
+			<li>Font family: Poppins</li>
+			<li>
+				source:{' '}
+				<Link to="https://fonts.google.com/specimen/Poppins" target="_blank">
+					Poppins
+				</Link>
+			</li>
+		</ul>
 		<TagUnderlinedText>Headlines</TagUnderlinedText>
 		<TypographyExample tag="h1">This is the styleguide</TypographyExample>
 		<TypographyExample tag="h2">This is the styleguide</TypographyExample>

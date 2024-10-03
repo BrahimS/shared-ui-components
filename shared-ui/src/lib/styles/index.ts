@@ -66,6 +66,10 @@ export const TagUnderlinedText = styled(TagText)`
 	border-bottom: 2px solid ${theme.colors.grey};
 `;
 
+export const BoxWrapper = styled(Box)`
+	padding: ${theme.spacing.md};
+`;
+
 export const ExampleContent = styled.div`
 	width: 90%;
 	padding-bottom: 8px;

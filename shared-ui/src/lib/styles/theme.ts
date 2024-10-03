@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-const colorScheme = {
+export const colorScheme = {
 	blue: '#2185D0',
 	teal: '#00B5AD',
 	green: '#21BA45',

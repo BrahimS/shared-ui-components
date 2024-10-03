@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import * as Menubar from '@radix-ui/react-menubar';
 import { Box, Button } from '@radix-ui/themes';
 import { theme } from './theme';
+import { FlexBox } from '../Grid/FlexBox';
 
 export interface ContainerWrapperProps {
 	children: React.ReactNode;
@@ -19,6 +20,65 @@ export interface FlexBoxProps {
 	gap?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 	style?: React.CSSProperties;
 }
+export const BoxElement = styled(Box)<{ $isbig?: boolean }>`
+	background-color: ${theme.colors.white};
+	color: ${theme.colors.black};
+	border-radius: ${theme.spacing.xs};
+	padding: ${theme.spacing.md};
+	min-height: 100px;
+	min-width: 100px;
+	box-sizing: 'border-box';
+	${(props) =>
+		props.$isbig &&
+		css`
+			min-height: 500px;
+			min-width: 400px;
+			background: transparent;
+			padding: ${theme.spacing.md};
+			color: ${theme.colors.primary};
+			box-shadow: ${theme.shadows.medium};
+		`}
+`;
+
+export const SmallBoxElement = styled(BoxElement)`
+	padding: 16px;
+	width: 5%;
+`;
+
+export const StyleguideContainer = styled(FlexBox)`
+	padding: 8px 0;
+	width: 100%;
+`;
+
+export const TagLabel = styled.div`
+	width: 5%;
+`;
+
+export const TagText = styled.p`
+	color: ${theme.colors.grey};
+`;
+export const TagUnderlinedText = styled(TagText)`
+	display: inline-block;
+	height: 20px;
+	padding: 0;
+	padding-bottom: ${theme.spacing.md};
+	margin-bottom: ${theme.spacing.md};
+	border-bottom: 2px solid ${theme.colors.grey};
+`;
+
+export const ExampleContent = styled.div`
+	width: 90%;
+	padding-bottom: 8px;
+`;
+export const ParagraphContainer = styled(FlexBox)`
+	padding-top: ${theme.spacing.md};
+`;
+
+export const TypographySectionWrapper = styled(BoxElement)`
+	/* padding: 24px; */
+	width: 70%;
+`;
+
 export const FlexWrapper = styled.div<FlexBoxProps>`
 	display: flex;
 	flex-direction: ${(props) => props.direction || 'row'};
@@ -161,25 +221,7 @@ export const SmallSquare = styled.div`
 	transform: ${theme.logo.rotation.small} ${theme.logo.translate};
 	background: ${theme.logo.color};
 `;
-export const BoxElement = styled(Box)<{ $isbig?: boolean }>`
-	background-color: ${theme.colors.white};
-	color: ${theme.colors.black};
-	border-radius: ${theme.spacing.xs};
-	padding: ${theme.spacing.md};
-	min-height: 100px;
-	min-width: 100px;
-	box-sizing: 'border-box';
-	${(props) =>
-		props.$isbig &&
-		css`
-			min-height: 500px;
-			min-width: 400px;
-			background: transparent;
-			padding: ${theme.spacing.md};
-			color: ${theme.colors.primary};
-			box-shadow: ${theme.shadows.medium};
-		`}
-`;
+
 export const FooterWrapper = styled.footer`
 	display: flex;
 	justify-content: flex-end;

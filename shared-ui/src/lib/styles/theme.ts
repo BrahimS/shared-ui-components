@@ -20,7 +20,6 @@ const colorScheme = {
 };
 
 export const theme: DefaultTheme = {
-	// Color Palette
 	colors: {
 		blue: colorScheme.blue,
 		teal: colorScheme.teal,

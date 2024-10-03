@@ -22,7 +22,6 @@ export const GlobalStyle = createGlobalStyle`
     font: inherit;
     vertical-align: baseline;
   }
-
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
@@ -64,10 +63,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
  body {
-   background-color: ${({ theme }) => theme.colors.background};
+   background-color: ${theme.colors.background};
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   color: ${({ theme }) => theme.colors.text};
+   color: ${theme.colors.text};
    font-weight: ${theme.typography.fontWeight.regular};
    line-height: ${theme.typography.lineHeight.body};
    font-size: ${theme.typography.fontSize.body};

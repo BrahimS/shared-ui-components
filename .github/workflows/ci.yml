@@ -3,28 +3,72 @@ name: CI
 on:
   push:
     branches:
-    - main
+      - main
   pull_request:
-
-permissions:
-  actions: read
-  contents: read
+    branches:
+      - main
 
 jobs:
   main:
+    name: Nx Workspace CI
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
 
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-    # Cache node_modules
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm'
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        run: |
+          echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
 
-    - run: npm run lint
-    - run: npm run test
-    - run: npm run build
+      - uses: actions/cache@v3
+        id: npm-cache
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Check format
+        run: npx nx format:check
+
+      - name: Lint affected projects
+        run: |
+          npx nx affected:lint --parallel=3 --base=origin/main --skip-nx-cache
+
+      - name: Test affected projects
+        run: |
+          npx nx affected --target=test --parallel=3 --configuration=ci --base=origin/main --skip-nx-cache || true
+
+      - name: Build affected projects
+        run: |
+          npx nx affected:build --parallel=3 --base=origin/main --skip-nx-cache
+
+  # Optional: Add a job to check for dependency updates
+  dependabot:
+    name: 'Dependabot'
+    needs: [main]
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request' }}
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: Enable auto-merge for Dependabot PRs
+        if: ${{steps.metadata.outputs.update-type == 'version-update:semver-patch'}}
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

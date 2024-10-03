@@ -6,9 +6,15 @@
 		"start": "nx serve",
 		"start:uikit": "nx serve uikit",
 		"build": "nx build",
-		"test": " vitest --coverage",
+		"uikit:build": "nx build uikit",
+		"uikit:test": " vitest --run",
+		"shared-ui:test": " vitest --run",
+		"test": " vitest --run",
+		"test:coverage": " vitest --coverage",
 		"lint": "nx run-many --target lint",
-		"typecheck": "tsc --project tsconfig.base.json --noEmit",
+		"check:type": "nx run-many --target=typecheck --parallel",
+		"check:format": "nx format:check",
+		"format": "nx format --all",
 		"e2e": "nx e2e",
 		"storybook:uikit": "nx storybook uikit",
 		"build-storybook": "build-storybook",
@@ -22,7 +28,7 @@
 		"styled-components": "5.3.6"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.14.5",
+		"@babel/core": "^7.25.7",
 		"@babel/plugin-syntax-jsx": "^7.25.7",
 		"@babel/preset-react": "^7.14.5",
 		"@eslint/js": "^9.8.0",
@@ -35,7 +41,7 @@
 		"@nx/playwright": "19.8.2",
 		"@nx/react": "19.8.2",
 		"@nx/storybook": "19.8.2",
-		"@nx/vite": "19.8.2",
+		"@nx/vite": "19.8.3",
 		"@nx/web": "19.8.2",
 		"@nx/workspace": "19.8.2",
 		"@playwright/test": "^1.36.0",
@@ -70,7 +76,7 @@
 		"babel-plugin-styled-components": "1.10.7",
 		"eslint": "^9.8.0",
 		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-import": "2.30.0",
+		"eslint-plugin-import": "2.31.0",
 		"eslint-plugin-jsx-a11y": "6.7.1",
 		"eslint-plugin-playwright": "^1.6.2",
 		"eslint-plugin-react": "7.35.0",
@@ -90,7 +96,7 @@
 		"tslib": "^2.3.0",
 		"typescript": "~5.5.2",
 		"typescript-eslint": "^8.0.0",
-		"vite": "^5.0.0",
-		"vitest": "^1.3.1"
+		"vite": "^5.4.8",
+		"vitest": "^2.1.2"
 	}
 }

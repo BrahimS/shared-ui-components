@@ -5,11 +5,16 @@ import { Container } from '../Grid/ContainerWrapper';
 interface HeaderProps {
 	logo: React.ReactNode;
 	children: React.ReactNode;
+	style: React.CSSProperties;
 }
 
-export const Header = ({ logo, children }: HeaderProps): React.ReactNode => {
+export const Header = ({
+	logo,
+	children,
+	style,
+}: HeaderProps): React.ReactNode => {
 	return (
-		<HeaderWrapper>
+		<HeaderWrapper style={style}>
 			<Container
 				size="xl"
 				padding="md"

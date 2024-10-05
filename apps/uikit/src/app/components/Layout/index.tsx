@@ -11,6 +11,7 @@ import {
 	MainContent,
 	Menu,
 	SmallSquare,
+	theme,
 } from '@react-monorepo/shared-ui';
 
 const Logo = (): React.ReactNode => (
@@ -28,8 +29,21 @@ export const Layout = (): React.ReactNode => {
 				keywords="ui, kit, library"
 			/>
 
-			<Header logo={<Logo />} children={<Menu />}></Header>
-			<ContainerWrapper size="full">
+			<Header
+				logo={<Logo />}
+				children={<Menu />}
+				style={{
+					position: 'fixed',
+					top: 0,
+					left: 0,
+					right: 0,
+					width: '100%',
+					zIndex: 9999,
+					backgroundColor: theme.colors.white,
+				}}
+			/>
+
+			<ContainerWrapper style={{ margin: '64px 0' }}>
 				<MainContent>
 					<Outlet />
 				</MainContent>

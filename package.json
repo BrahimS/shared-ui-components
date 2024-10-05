@@ -10,6 +10,7 @@
 		"uikit:test": " vitest --run",
 		"shared-ui:test": " vitest --run",
 		"test": " vitest --run",
+		"test:watch": " vitest --watch",
 		"test:coverage": " vitest --coverage",
 		"lint": "nx run-many --target lint",
 		"check:type": "nx run-many --target=typecheck --parallel",

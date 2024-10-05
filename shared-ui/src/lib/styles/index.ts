@@ -126,7 +126,8 @@ export const FlexWrapper = styled.div<FlexBoxProps>`
 export const ContainerWrapper = styled.div<ContainerWrapperProps>`
 	margin: 0 auto;
 	width: 100%;
-	padding: 0;
+	padding-left: ${theme.spacing.md};
+	padding-right: ${theme.spacing.md};
 	box-sizing: border-box;
 	${({ theme, size }) => {
 		switch (size) {
@@ -158,7 +159,6 @@ export const HeaderWrapper = styled.header`
 	width: 100vw;
 	box-shadow: ${theme.shadows.medium};
 	color: ${theme.colors.primary};
-	z-index: 1;
 `;
 
 export const MainWrapper = styled.main`
@@ -170,6 +170,7 @@ export const MainWrapper = styled.main`
 	height: calc(100vh - 116px);
 	color: ${theme.colors.primary};
 	background-color: transparent;
+	z-index: -1;
 `;
 
 export const MenubarRootWrapper = styled(Menubar.Root)`
@@ -234,6 +235,10 @@ export const FooterWrapper = styled.footer`
 	background-color: ${theme.colors.yellow};
 	max-height: 60px;
 	width: 100%;
+	position: fixed;
+	bottom: 0;
+	width: '100%';
+	padding: ${theme.spacing.md} 0;
 `;
 
 export const DefaultButton = styled(Button)`

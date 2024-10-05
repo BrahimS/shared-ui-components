@@ -16,7 +16,7 @@ export const colorScheme = {
 	charcoal: '#43425D',
 	black: '#1B1C1D',
 	cream: '#F7F7F7',
-	white: 'FFFFFF',
+	white: '#FFFFFF',
 };
 
 export const theme: DefaultTheme = {

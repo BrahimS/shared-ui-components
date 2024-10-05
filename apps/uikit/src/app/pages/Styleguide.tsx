@@ -5,7 +5,9 @@ import {
 	Container,
 	FlexBox,
 	StyleguideContainer,
+	TagUnderlinedText,
 	theme,
+	TypographySectionWrapper,
 } from '@react-monorepo/shared-ui';
 import { TypographySection } from '../components/StyleGuide/Typography';
 
@@ -22,18 +24,29 @@ const Styleguide: React.FC = () => {
 			<FlexBox
 				gap="1"
 				wrap="wrap"
-				align="stretch"
-				justify="between"
-				style={{ marginTop: '2rem', width: '40%' }}
+				align="start"
+				justify="start"
+				style={{ width: '40%' }}
 			>
+				<TypographySectionWrapper $isbig={false} style={{ width: '100%' }}>
+					<TagUnderlinedText>Colors</TagUnderlinedText>
+				</TypographySectionWrapper>
 				{Object.entries(colorScheme).map(([key, value]) => (
 					<Box
-						w="64px"
-						h="64px"
+						key={key}
+						w="100px"
+						h="100px"
 						style={{
 							backgroundColor: value,
 							borderRadius: theme.spacing.md,
-							color: 'white',
+							color:
+								value === theme.colors.white || value === theme.colors.cream
+									? theme.colors.black
+									: theme.colors.white,
+							boxSizing: 'border-box',
+							minWidth: '100px',
+							maxWidth: '100px',
+							textAlign: 'center',
 						}}
 					>
 						{key}

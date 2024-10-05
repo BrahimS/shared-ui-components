@@ -8,7 +8,7 @@ export interface FooterProps {
 
 export const Footer = ({ children }: FooterProps): React.ReactNode => {
 	return (
-		<FooterWrapper style={{ padding: '8px 0' }} data-testid="footer-wrapper">
+		<FooterWrapper data-testid="footer-wrapper" style={{ padding: '8px 0' }}>
 			<Container
 				data-testid="container"
 				size="xl"

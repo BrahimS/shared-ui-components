@@ -3,10 +3,9 @@ import {
 	FlexBox,
 	Heading,
 	ParagraphContainer,
-	TagLabel,
 	TagText,
-	TagUnderlinedText,
-	TypographySectionWrapper,
+	Box,
+	theme,
 } from '@react-monorepo/shared-ui';
 import { Link } from 'react-router-dom';
 
@@ -15,22 +14,28 @@ export const TypographyExample: React.FC<{
 	children: React.ReactNode;
 }> = ({ tag, children }) => (
 	<FlexBox
-		direction="row"
-		gap="4"
-		wrap="nowrap"
-		justify="between"
-		align="center"
+		style={{
+			display: 'flex',
+			flexDirection: 'row',
+			alignItems: 'flex-start',
+			justifyContent: 'start',
+		}}
 	>
-		<TagLabel>
-			<TagText>{tag}</TagText>
-		</TagLabel>
+		<TagText style={{ marginRight: '1.5rem' }}>{tag}</TagText>
 		<Heading as={tag}> {children}</Heading>
 	</FlexBox>
 );
 
 export const TypographySection: React.FC = () => (
-	<TypographySectionWrapper $isbig>
-		<TagUnderlinedText>Typography</TagUnderlinedText>
+	<Box
+		w="60%"
+		as={'div'}
+		asChild={false}
+		shadow={theme.shadows.medium}
+		borderRadius={theme.spacing.sm}
+		p={theme.spacing.sm}
+	>
+		<TagText>Typography</TagText>
 		<ul style={{ marginBottom: '1.5rem' }}>
 			<li>Font family: Poppins</li>
 			<li>
@@ -40,7 +45,7 @@ export const TypographySection: React.FC = () => (
 				</Link>
 			</li>
 		</ul>
-		<TagUnderlinedText>Headlines</TagUnderlinedText>
+		<TagText>Headlines</TagText>
 		<TypographyExample tag="h1">This is the styleguide</TypographyExample>
 		<TypographyExample tag="h2">This is the styleguide</TypographyExample>
 		<TypographyExample tag="h3">This is the styleguide</TypographyExample>
@@ -50,10 +55,10 @@ export const TypographySection: React.FC = () => (
 			direction="column"
 			gap="0"
 			wrap="nowrap"
-			justify="between"
+			justify="space-between"
 			align="start"
 		>
-			<TagUnderlinedText>Paragraph</TagUnderlinedText>
+			<TagText>Paragraph</TagText>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
 				dolore rem modi laboriosam deleniti vitae. Aspernatur saepe itaque,
@@ -61,5 +66,5 @@ export const TypographySection: React.FC = () => (
 				corporis!
 			</p>
 		</ParagraphContainer>
-	</TypographySectionWrapper>
+	</Box>
 );

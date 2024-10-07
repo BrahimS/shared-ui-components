@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
   /* Global Styles */
   html {
     box-sizing: border-box;
-    font-size: 16px; /* Set base font size */
+    font-size: 1rem; /* Set base font size */
     overflow-y: scroll;
 	  overflow-x: hidden;
     scroll-behavior: smooth;
@@ -80,6 +80,8 @@ export const GlobalStyle = createGlobalStyle`
     line-height: ${theme.typography.lineHeight.heading};
     color: ${theme.colors.text.primary};
     font-family: ${theme.typography.fontFamily};
+
+
   }
 
   h1 {

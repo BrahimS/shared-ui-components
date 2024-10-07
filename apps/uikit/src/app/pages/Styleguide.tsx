@@ -4,6 +4,7 @@ import {
 	colorScheme,
 	Container,
 	FlexBox,
+	Heading,
 	StyleguideContainer,
 	TagUnderlinedText,
 	theme,
@@ -15,7 +16,7 @@ import { TypographySection } from '../components/StyleGuide/Typography';
 const Styleguide: React.FC = () => {
 	return (
 		<Container size="xl">
-			<h1>UI Kit Library</h1>
+			<Heading as="h1">UI Kit Library</Heading>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
 				voluptatem distinctio eveniet voluptatum est iste, laudantium a officiis

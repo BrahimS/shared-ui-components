@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-	ExampleContent,
 	FlexBox,
+	Heading,
 	ParagraphContainer,
 	TagLabel,
 	TagText,
@@ -11,7 +11,7 @@ import {
 import { Link } from 'react-router-dom';
 
 export const TypographyExample: React.FC<{
-	tag: string;
+	tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 	children: React.ReactNode;
 }> = ({ tag, children }) => (
 	<FlexBox
@@ -24,12 +24,12 @@ export const TypographyExample: React.FC<{
 		<TagLabel>
 			<TagText>{tag}</TagText>
 		</TagLabel>
-		<ExampleContent>{React.createElement(tag, {}, children)}</ExampleContent>
+		<Heading as={tag}> {children}</Heading>
 	</FlexBox>
 );
 
 export const TypographySection: React.FC = () => (
-	<TypographySectionWrapper $isbig={false}>
+	<TypographySectionWrapper $isbig>
 		<TagUnderlinedText>Typography</TagUnderlinedText>
 		<ul style={{ marginBottom: '1.5rem' }}>
 			<li>Font family: Poppins</li>

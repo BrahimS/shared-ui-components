@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as Menubar from '@radix-ui/react-menubar';
-import { Box, Button } from '@radix-ui/themes';
+import { Box, Button, Heading } from '@radix-ui/themes';
 import { theme } from './theme';
 import { FlexBox } from '../Grid/FlexBox';
 
@@ -20,6 +20,9 @@ export interface FlexBoxProps {
 	gap?: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 	style?: React.CSSProperties;
 }
+export const HeadingWrapper = styled(Heading)`
+	color: ${theme.colors.primary};
+`;
 export const BoxElement = styled(Box)<{ $isbig?: boolean }>`
 	background-color: ${theme.colors.white};
 	color: ${theme.colors.black};
@@ -37,7 +40,7 @@ export const BoxElement = styled(Box)<{ $isbig?: boolean }>`
 			padding: ${theme.spacing.md};
 			color: ${theme.colors.primary};
 			box-shadow: ${theme.shadows.medium};
-		`}
+		}`}
 `;
 
 export const SmallBoxElement = styled(BoxElement)`
@@ -54,7 +57,7 @@ export const TagLabel = styled.div`
 	width: 5%;
 `;
 
-export const TagText = styled.p`
+export const TagText = styled(Heading)`
 	color: ${theme.colors.grey};
 `;
 export const TagUnderlinedText = styled(TagText)`

@@ -1,7 +1,8 @@
 import React from 'react';
-import { FlexBoxProps, FlexWrapper } from '../styles';
+import { FlexBoxProps } from '../styles';
 
 export const FlexBox = ({
+	display,
 	children,
 	direction,
 	gap,
@@ -11,17 +12,25 @@ export const FlexBox = ({
 	style,
 	...props
 }: FlexBoxProps) => {
-	return (
-		<FlexWrapper
-			direction={direction}
-			gap={gap}
-			align={align}
-			justify={justify}
-			wrap={wrap}
-			style={style}
-			{...props}
-		>
-			{children}
-		</FlexWrapper>
+	return React.createElement(
+		'div',
+		{
+			direction,
+			gap,
+			align,
+			justify,
+			wrap,
+			...props,
+			style: {
+				display: display,
+				flexDirection: direction,
+				justifyContent: justify,
+				alignItems: align,
+				flexWrap: wrap,
+
+				...style,
+			},
+		},
+		children,
 	);
 };

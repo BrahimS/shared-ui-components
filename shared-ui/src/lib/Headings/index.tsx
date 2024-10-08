@@ -1,20 +1,17 @@
 import React from 'react';
+import { HeadingProps, StyledHeading } from '../styles';
 
-interface HeadingProps {
-	children: React.ReactNode;
-	as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-	color?: string;
-	style?: React.CSSProperties;
-	role?: string;
-}
-
-export const Heading = ({
-	as,
-	color,
-	style,
+export const Heading: React.FC<HeadingProps> = ({
+	as = 'h1',
 	children,
-	role,
+	style,
+	color,
+	role = 'heading',
 	...props
-}: HeadingProps) => {
-	return React.createElement(as, { role: 'heading', ...props }, children);
+}) => {
+	return (
+		<StyledHeading as={as} style={style} {...props} color={color} role={role}>
+			{children}
+		</StyledHeading>
+	);
 };

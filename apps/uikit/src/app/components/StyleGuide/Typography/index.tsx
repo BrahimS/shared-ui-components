@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
 	FlexBox,
 	Heading,
@@ -7,7 +8,6 @@ import {
 	Box,
 	theme,
 } from '@react-monorepo/shared-ui';
-import { Link } from 'react-router-dom';
 
 export const TypographyExample: React.FC<{
 	tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

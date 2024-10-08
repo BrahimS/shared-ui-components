@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as Menubar from '@radix-ui/react-menubar';
@@ -11,6 +12,13 @@ export interface ContainerWrapperProps {
 	size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
 	padding?: keyof typeof theme.spacing;
 	style?: React.CSSProperties;
+}
+export interface HeadingProps {
+	children: React.ReactNode;
+	as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+	color?: string;
+	style?: React.CSSProperties;
+	role?: string;
 }
 export interface FlexBoxProps {
 	children: React.ReactNode;
@@ -32,12 +40,79 @@ export interface ButtonProps
 }
 
 export const mediaQueries = {
-	mobile: `@media (min-width: ${theme.breakpoints.mobile})`,
-	tablet: `@media (min-width: ${theme.breakpoints.tablet})`,
-	laptop: `@media (min-width: ${theme.breakpoints.laptop})`,
-	desktop: `@media (min-width: ${theme.breakpoints.desktop})`,
-	tv: `@media (min-width: ${theme.breakpoints.tv})`,
+	mobile: `@media (max-width: ${theme.breakpoints.mobile})`,
+	tablet: `@media (max-width: ${theme.breakpoints.tablet})`,
+	laptop: `@media (max-width: ${theme.breakpoints.laptop})`,
+	desktop: `@media (max-width: ${theme.breakpoints.desktop})`,
+	tv: `@media (max-width: ${theme.breakpoints.tv})`,
 };
+export const StyledHeading = styled.h1<{ as: string }>`
+	font-weight: bold;
+	margin-bottom: 1rem;
+	text-align: left;
+
+	${mediaQueries.mobile} {
+		margin-bottom: ${theme.spacing.md};
+	}
+
+	${(props) =>
+		props.as === 'h1' &&
+		`
+    font-size: ${theme.typography.fontSize.h1};
+		${mediaQueries.tablet} {
+			font-size: 2.5rem;
+		}
+    ${mediaQueries.mobile} {
+      font-size: 2rem;
+    }
+  `}
+
+	${(props) =>
+		props.as === 'h2' &&
+		`
+    font-size:  ${theme.typography.fontSize.h2};
+		${mediaQueries.tablet} {
+			font-size: 2.2rem;
+		}
+    ${mediaQueries.mobile} {
+      font-size: 1.8rem;
+    }
+
+  `}
+	${(props) =>
+		props.as === 'h3' &&
+		`
+    font-size:  ${theme.typography.fontSize.h3};
+		${mediaQueries.tablet} {
+			font-size: 1.8rem;
+		}
+    ${mediaQueries.mobile} {
+      font-size: 1.6rem;
+    }
+  `}
+	${(props) =>
+		props.as === 'h4' &&
+		`
+    font-size:  ${theme.typography.fontSize.h4};
+		${mediaQueries.tablet} {
+			font-size: 1.4rem;
+		}
+    ${mediaQueries.mobile} {
+      font-size: 1.3rem;
+    }
+  `}
+	${(props) =>
+		props.as === 'h5' &&
+		`
+    font-size:  ${theme.typography.fontSize.h5};
+		${mediaQueries.tablet} {
+			font-size: 1rem;
+		}
+    ${mediaQueries.mobile} {
+      font-size: 0.9rem;
+    }
+  `}
+`;
 
 export const TagText = styled('h2')`
 	opacity: 0.2;

@@ -68,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`
    background-color: ${theme.colors.background};
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   color: ${theme.colors.text};
+   color: ${theme.colors.text.primary};
    font-weight: ${theme.typography.fontWeight.regular};
    line-height: ${theme.typography.lineHeight.body};
    font-size: ${theme.typography.fontSize.body};
@@ -99,4 +99,7 @@ export const GlobalStyle = createGlobalStyle`
   h5 {
     font-size: ${theme.typography.fontSize.h5};
   }
+  p{
+    color: ${theme.colors.text.primary};
+    font-size: ${theme.typography.fontSize.body};}
 `;

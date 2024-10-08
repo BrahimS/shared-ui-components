@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import * as Menubar from '@radix-ui/react-menubar';
-
 import { Primitive } from '@radix-ui/react-primitive';
 import { FlexBox } from '../Grid/FlexBox';
 import { theme } from './theme';
@@ -37,6 +36,7 @@ export interface ButtonProps
 	radius?: 'none' | 'small' | 'medium' | 'large';
 	variant?: 'solid' | 'outlined' | 'ghost';
 	disabled?: boolean;
+	role?: string;
 }
 
 export const mediaQueries = {
@@ -289,11 +289,11 @@ export const Button = styled.button<ButtonProps>`
         `;
 			case 'medium':
 				return `
-          padding: 8px 12px;
+          padding: 12px 16px;
         `;
 			case 'large':
 				return `
-          padding: 12px 20px;
+          padding: 16px 24px;
         `;
 			default:
 				return ``;

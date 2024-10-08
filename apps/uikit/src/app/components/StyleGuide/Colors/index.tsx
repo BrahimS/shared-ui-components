@@ -6,10 +6,10 @@ export const Colors = () => {
 		<Box
 			display="flex"
 			flexDirection="row"
-			justifyContent="space-between"
+			justifyContent="start"
 			alignItems="start"
 			flexWrap="wrap"
-			w="38%"
+			w="100%"
 			p={theme.spacing.md}
 			shadow={theme.shadows.medium}
 			borderRadius={theme.spacing.sm}
@@ -22,8 +22,8 @@ export const Colors = () => {
 			{Object.entries(colorScheme).map(([key, value]) => (
 				<Box
 					key={key}
-					w="86px"
-					h="86px"
+					w="106px"
+					h="106px"
 					display="flex"
 					flexDirection="column"
 					justifyContent="center"

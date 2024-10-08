@@ -28,7 +28,7 @@ export const TypographyExample: React.FC<{
 
 export const TypographySection: React.FC = () => (
 	<Box
-		w="60%"
+		w="100%"
 		as={'div'}
 		asChild={false}
 		shadow={theme.shadows.medium}

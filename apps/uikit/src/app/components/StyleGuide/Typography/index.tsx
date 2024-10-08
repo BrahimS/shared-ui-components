@@ -33,7 +33,7 @@ export const TypographySection: React.FC = () => (
 		asChild={false}
 		shadow={theme.shadows.medium}
 		borderRadius={theme.spacing.sm}
-		p={theme.spacing.sm}
+		p={theme.spacing.md}
 	>
 		<TagText>Typography</TagText>
 		<ul style={{ marginBottom: '1.5rem' }}>
@@ -46,11 +46,11 @@ export const TypographySection: React.FC = () => (
 			</li>
 		</ul>
 		<TagText>Headlines</TagText>
-		<TypographyExample tag="h1">This is the styleguide</TypographyExample>
-		<TypographyExample tag="h2">This is the styleguide</TypographyExample>
-		<TypographyExample tag="h3">This is the styleguide</TypographyExample>
-		<TypographyExample tag="h4">This is the styleguide</TypographyExample>
-		<TypographyExample tag="h5">This is the styleguide</TypographyExample>
+		<TypographyExample tag="h1">The styleguide</TypographyExample>
+		<TypographyExample tag="h2">The styleguide</TypographyExample>
+		<TypographyExample tag="h3">The styleguide</TypographyExample>
+		<TypographyExample tag="h4">The styleguide</TypographyExample>
+		<TypographyExample tag="h5">The styleguide</TypographyExample>
 		<ParagraphContainer
 			direction="column"
 			gap="0"

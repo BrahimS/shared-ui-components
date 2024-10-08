@@ -1,4 +1,5 @@
 import React from 'react';
+import { theme } from '../styles/theme';
 
 interface TextProps {
 	children: React.ReactNode;
@@ -30,7 +31,7 @@ export const Text = ({
 		{
 			role: 'textbox',
 			style,
-			color,
+			color: theme.colors.charcoal,
 			truncate,
 			align,
 			weight,

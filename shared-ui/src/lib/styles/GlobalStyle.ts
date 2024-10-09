@@ -55,9 +55,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 1rem; /* Set base font size */
-    overflow-y: scroll;
-	  overflow-x: hidden;
-    scroll-behavior: smooth;
+    height: 100vh;
   }
 
   *, *:before, *:after {
@@ -68,6 +66,10 @@ export const GlobalStyle = createGlobalStyle`
    background-color: ${theme.colors.background};
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+    overflow-y: scroll;
+	  overflow-x: hidden;
+    scroll-behavior: smooth;
    color: ${theme.colors.text.primary};
    font-weight: ${theme.typography.fontWeight.regular};
    line-height: ${theme.typography.lineHeight.body};

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import * as Form from '@radix-ui/react-form';
 import * as Menubar from '@radix-ui/react-menubar';
 import { Primitive } from '@radix-ui/react-primitive';
 import { FlexBox } from '../Grid/FlexBox';
@@ -38,6 +39,46 @@ export interface ButtonProps
 	disabled?: boolean;
 	role?: string;
 }
+export const StyledForm = styled(Form.Root)`
+	width: 100%;
+	color: ${theme.colors.text.primary};
+	font-size: ${theme.typography.fontSize.small};
+`;
+
+export const StyledFormField = styled(Form.Field)`
+	margin-bottom: 15px;
+	width: 100%;
+`;
+
+export const StyledFieldHeader = styled.div`
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+`;
+
+export const StyledLabel = styled(Form.Label)`
+	font-weight: ${theme.typography.fontWeight.medium};
+`;
+
+export const StyledErrorMessage = styled(Form.Message)`
+	color: red;
+	font-size: 0.8em;
+`;
+
+export const StyledInput = styled.input`
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+`;
+
+export const StyledTextarea = styled.textarea`
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	min-height: 100px;
+`;
 
 export const mediaQueries = {
 	mobile: `@media (max-width: ${theme.breakpoints.mobile})`,
@@ -173,10 +214,10 @@ export const MainWrapper = styled.main`
 	justify-items: flex-start;
 	align-items: flex-start;
 	padding: 3rem 1rem;
-	height: calc(100vh - 116px);
+	height: 100vh;
 	color: ${theme.colors.primary};
 	background-color: transparent;
-	z-index: -1;
+	z-index: 1;
 `;
 
 export const MenubarRootWrapper = styled(Menubar.Root)`

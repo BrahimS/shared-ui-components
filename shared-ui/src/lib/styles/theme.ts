@@ -1,4 +1,3 @@
-import { breakpoints } from '@radix-ui/themes/dist/cjs/props/prop-def';
 import { DefaultTheme } from 'styled-components';
 
 export const colorScheme = {

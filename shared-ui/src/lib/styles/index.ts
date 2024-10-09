@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import * as Form from '@radix-ui/react-form';
 import * as Menubar from '@radix-ui/react-menubar';
 import { Primitive } from '@radix-ui/react-primitive';
+import * as Select from '@radix-ui/react-select';
 import { FlexBox } from '../Grid/FlexBox';
 import { theme } from './theme';
 
@@ -38,6 +40,139 @@ export interface ButtonProps
 	disabled?: boolean;
 	role?: string;
 }
+
+export const StyledSelectRoot = styled(Select.Root)`
+	width: 100%;
+`;
+export const StyledSelectTrigger = styled(Select.Trigger)`
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 4px;
+	padding: 0 15px;
+	font-size: 13px;
+	line-height: 1;
+	height: 35px;
+	gap: 5px;
+	width: 100%;
+	background-color: white;
+	color: ${theme.colors.text.primary};
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+	&:hover {
+		background-color: #f9f9f9;
+	}
+	&:focus {
+		box-shadow: 0 0 0 2px black;
+	}
+`;
+
+export const StyledSelectValue = styled(Select.Value)``;
+export const StyledSelectIcon = styled(Select.Icon)``;
+export const StyledSelectItem = styled(Select.Item)`
+	font-size: 13px;
+	line-height: 1;
+	color: ${theme.colors.text.primary};
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	height: 25px;
+	padding: 0 35px 0 25px;
+	position: relative;
+	user-select: none;
+
+	&[data-disabled] {
+		color: #999;
+		pointer-events: none;
+	}
+
+	&[data-highlighted] {
+		outline: none;
+		background-color: ${theme.colors.text.primary};
+		color: white;
+	}
+`;
+export const StyledSelectViewport = styled(Select.Viewport)`
+	padding: 5px;
+`;
+export const StyledSelectItemText = styled(Select.ItemText)``;
+
+export const StyledForm = styled(Form.Root)`
+	width: 100%;
+	color: ${theme.colors.text.primary};
+	font-size: ${theme.typography.fontSize.small};
+`;
+export const StyledSelectContent = styled(Select.Content)`
+	overflow: hidden;
+	background-color: white;
+	border-radius: 6px;
+	box-shadow:
+		0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+		0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+`;
+export const StyledSelectLabel = styled(Select.Label)`
+	padding: 0 25px;
+	font-size: 12px;
+	line-height: 25px;
+	color: #999;
+`;
+export const StyledSelectSeparator = styled(Select.Separator)`
+	height: 1px;
+	background-color: ${theme.colors.text.primary};
+	margin: 5px;
+`;
+export const StyledSelectItemIndicator = styled(Select.ItemIndicator)`
+	position: absolute;
+	left: 0;
+	width: 25px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+`;
+export const StyledSelectScrollButton = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 25px;
+	background-color: ${theme.colors.primary};
+	color: ${theme.colors.text.primary};
+	cursor: default;
+`;
+export const StyledSelectGroup = styled(Select.Group)``;
+export const StyledFormField = styled(Form.Field)`
+	margin-bottom: 15px;
+	width: 100%;
+`;
+
+export const StyledFieldHeader = styled.div`
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+`;
+
+export const StyledLabel = styled(Form.Label)`
+	font-weight: ${theme.typography.fontWeight.medium};
+`;
+
+export const StyledErrorMessage = styled(Form.Message)`
+	color: red;
+	font-size: 0.8em;
+`;
+
+export const StyledInput = styled.input`
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+`;
+
+export const StyledTextarea = styled.textarea`
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	min-height: 100px;
+`;
 
 export const mediaQueries = {
 	mobile: `@media (max-width: ${theme.breakpoints.mobile})`,
@@ -173,10 +308,9 @@ export const MainWrapper = styled.main`
 	justify-items: flex-start;
 	align-items: flex-start;
 	padding: 3rem 1rem;
-	height: calc(100vh - 116px);
 	color: ${theme.colors.primary};
 	background-color: transparent;
-	z-index: -1;
+	z-index: 1;
 `;
 
 export const MenubarRootWrapper = styled(Menubar.Root)`

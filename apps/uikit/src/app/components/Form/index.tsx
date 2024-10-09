@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-	Box,
-	Button,
-	FlexBox,
-	TagText,
-	theme,
-} from '@react-monorepo/shared-ui';
+import { Box, ContactForm, TagText, theme } from '@react-monorepo/shared-ui';
+import { ComboBoxDemo } from './Select';
 
 export const Forms = () => {
 	return (
@@ -25,26 +20,17 @@ export const Forms = () => {
 			<Box as="div" asChild w="100%" p="8px 0" justifyContent="start">
 				<TagText>Forms</TagText>
 			</Box>
-			<FlexBox
-				display="flex"
-				direction="row"
-				justify="space-between"
-				gap="4"
-				align="center"
-			>
-				<Button variant="solid" color="primary" size="medium">
-					Primary
-				</Button>
-				<Button variant="outlined" color="secondary" size="medium">
-					Outlined
-				</Button>
-				<Button variant="ghost" color="danger" size="medium">
-					Ghost
-				</Button>
-				<Button variant="solid" color="primary" size="medium" disabled>
-					Disabled
-				</Button>
-			</FlexBox>
+			<ContactForm
+				fields={[
+					{
+						name: 'label',
+						label: 'Label',
+						type: 'text',
+						required: true,
+					},
+				]}
+			/>
+			<ComboBoxDemo />
 		</Box>
 	);
 };

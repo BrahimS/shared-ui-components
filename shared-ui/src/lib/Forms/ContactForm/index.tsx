@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledForm } from '../../styles';
 import { FormField } from '../Input';
-import { SubmitButton } from '../../Buttons/SubmitButton';
+import { SubmitButton } from '../../Buttons';
 
 interface FormFieldProps {
 	name: string;

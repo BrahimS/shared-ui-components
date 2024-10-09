@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, ContactForm, TagText, theme } from '@react-monorepo/shared-ui';
+import { ComboBoxDemo } from './Select';
 
 export const Forms = () => {
 	return (
@@ -29,6 +30,7 @@ export const Forms = () => {
 					},
 				]}
 			/>
+			<ComboBoxDemo />
 		</Box>
 	);
 };

@@ -3,6 +3,7 @@ export * from './lib/Footer/index';
 export * from './lib/Forms/ComboBox';
 export * from './lib/Forms/ContactForm/index';
 export * from './lib/Forms/Input/index';
+export * from './lib/Forms/LoginForm/index';
 export * from './lib/Grid/Box';
 export * from './lib/Grid/FlexBox';
 export * from './lib/Grid/ContainerWrapper';

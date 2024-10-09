@@ -10,7 +10,12 @@ import { Forms } from '../components/Form';
 const Styleguide: React.FC = () => {
 	return (
 		<Container size="xl">
-			<Intro />
+			<Intro
+				title={'UI Kit Library'}
+				description={
+					'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolor nisi dolores repellat aliquam reiciendis,'
+				}
+			/>
 			<FlexBox
 				style={{
 					width: '100%',

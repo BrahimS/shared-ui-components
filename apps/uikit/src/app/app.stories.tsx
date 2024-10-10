@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { App } from './app';
+import App from './app';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
@@ -19,6 +19,6 @@ export const Heading: Story = {
 	args: {},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
-		expect(canvas.getByText(/Welcome to App!/gi)).toBeTruthy();
+		expect(canvas.getByText(/UI Kit Library/gi)).toBeTruthy();
 	},
 };

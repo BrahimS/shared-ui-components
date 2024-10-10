@@ -1,15 +1,18 @@
 import { Box, Heading } from '@react-monorepo/shared-ui';
 import React from 'react';
+interface IntroProps {
+	title: string;
+	description: string;
+}
 
-export const Intro = () => {
+export const Intro: React.FC<IntroProps> = ({
+	title,
+	description,
+}: IntroProps) => {
 	return (
 		<Box w="100%" as="div" asChild>
-			<Heading as="h1">UI Kit Library</Heading>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-				voluptatem distinctio eveniet voluptatum est iste, laudantium a officiis
-				architecto, aspernatur veniam provident harum assumenda tempora dolorum!
-			</p>
+			<Heading as="h1">{title}</Heading>
+			<p>{description}</p>
 		</Box>
 	);
 };

@@ -15,9 +15,16 @@ interface FormFieldProps {
 	label: string;
 	type: 'text' | 'email' | 'textarea';
 	required?: boolean;
+	placeholder?: string;
 }
 
-export const FormField = ({ name, label, type, required }: FormFieldProps) => {
+export const FormField = ({
+	name,
+	label,
+	type,
+	required,
+	placeholder,
+}: FormFieldProps) => {
 	return (
 		<StyledFormField key={name} name={name}>
 			<StyledFieldHeader>
@@ -40,7 +47,7 @@ export const FormField = ({ name, label, type, required }: FormFieldProps) => {
 					<StyledInput
 						type={type}
 						required={required}
-						placeholder="Placeholder"
+						placeholder={placeholder}
 					/>
 				)}
 			</Form.Control>

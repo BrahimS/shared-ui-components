@@ -1,9 +1,9 @@
 import React from 'react';
 import { Intro } from '../components/StyleGuide/Intro';
-import { Box, LoginFormC, theme } from '@react-monorepo/shared-ui';
+import { Box, Container, LoginFormC, theme } from '@react-monorepo/shared-ui';
 
 const LoginForm = (): React.ReactNode => (
-	<section>
+	<Container size="xl">
 		<Intro
 			title={'Login Form'}
 			description={
@@ -15,18 +15,20 @@ const LoginForm = (): React.ReactNode => (
 			display="flex"
 			flexDirection="row"
 			justifyContent="start"
-			alignItems="start"
-			flexWrap="wrap"
+			alignItems="center"
+			flexWrap="nowrap"
 			w="100%"
-			p={theme.spacing.md}
+			h="100%"
+			p={theme.spacing.sm}
+			m={`${theme.spacing.lg} 0`}
 			shadow={theme.shadows.medium}
 			borderRadius={theme.spacing.sm}
 			as={'div'}
-			asChild={false}
+			asChild
 		>
 			<LoginFormC />
 		</Box>
-	</section>
+	</Container>
 );
 
 export default LoginForm;

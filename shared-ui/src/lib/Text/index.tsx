@@ -2,11 +2,11 @@ import React from 'react';
 import { theme } from '../styles/theme';
 
 interface TextProps {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 	as: 'span' | 'div' | 'label' | 'p';
 	color?: string;
 	style?: React.CSSProperties;
-	role: string;
+	role?: string;
 	truncate?: boolean;
 	align?: 'left' | 'center' | 'right';
 	weight?: string;

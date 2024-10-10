@@ -14,12 +14,14 @@ interface ContactFormProps {
 	fields: FormFieldProps[];
 	onSubmit?: (data: Record<string, string>) => void;
 	submitButtonText?: string;
+	style?: React.CSSProperties;
 }
 
 export const ContactForm: React.FC<ContactFormProps> = ({
 	fields,
 	onSubmit,
 	submitButtonText = 'Submit',
+	style,
 }) => {
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -32,7 +34,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
 	};
 
 	return (
-		<StyledForm onSubmit={handleSubmit}>
+		<StyledForm onSubmit={handleSubmit} style={style}>
 			{fields.map((field) => (
 				<FormField key={field.name} {...field} />
 			))}

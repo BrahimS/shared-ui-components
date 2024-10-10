@@ -21,6 +21,7 @@ export declare module 'styled-components' {
 			brown: string;
 			pink: string;
 			grey: string;
+			ligthGrey: string;
 			darkGrey: string;
 			charcoal: string;
 			black: string;

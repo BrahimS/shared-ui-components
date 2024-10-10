@@ -40,7 +40,13 @@ export interface ButtonProps
 	disabled?: boolean;
 	role?: string;
 }
-
+export const mediaQueries = {
+	mobile: `@media (max-width: ${theme.breakpoints.mobile})`,
+	tablet: `@media (max-width: ${theme.breakpoints.tablet})`,
+	laptop: `@media (max-width: ${theme.breakpoints.laptop})`,
+	desktop: `@media (max-width: ${theme.breakpoints.desktop})`,
+	tv: `@media (max-width: ${theme.breakpoints.tv})`,
+};
 export const StyledSelectRoot = styled(Select.Root)`
 	width: 100%;
 `;
@@ -161,9 +167,10 @@ export const StyledErrorMessage = styled(Form.Message)`
 
 export const StyledInput = styled.input`
 	width: 100%;
-	padding: 8px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
+	padding: 10px;
+	border: none;
+	background: ${theme.colors.ligthGrey};
+	border-radius: ${theme.spacing.lg};
 `;
 
 export const StyledTextarea = styled.textarea`
@@ -174,13 +181,6 @@ export const StyledTextarea = styled.textarea`
 	min-height: 100px;
 `;
 
-export const mediaQueries = {
-	mobile: `@media (max-width: ${theme.breakpoints.mobile})`,
-	tablet: `@media (max-width: ${theme.breakpoints.tablet})`,
-	laptop: `@media (max-width: ${theme.breakpoints.laptop})`,
-	desktop: `@media (max-width: ${theme.breakpoints.desktop})`,
-	tv: `@media (max-width: ${theme.breakpoints.tv})`,
-};
 export const StyledHeading = styled.h1<{ as: string }>`
 	font-weight: bold;
 	margin-bottom: 1rem;
@@ -348,29 +348,30 @@ export const Button = styled.button<ButtonProps>`
 	justify-content: center;
 	width: 100%;
 	padding: 10px;
-	margin: 0 ${({ theme }) => theme.spacing.xs};
+	margin: 0;
 	background-color: ${theme.colors.primary};
 	color: white;
-	border: none;
-	border-radius: 4px;
+	border: 1px solid ${theme.colors.primary};
+	border-radius: ${theme.spacing.lg};
 	cursor: pointer;
 	transition:
 		background-color 0.3s,
 		transform 0.1s;
-	font-weight: 500;
+	font-weight: 600;
 	letter-spacing: 0.2px;
 	font-size: 12px;
 
 	${mediaQueries.mobile} {
-		font-size: 16px;
+		font-size: 12px;
 	}
 
 	${mediaQueries.tablet} {
-		font-size: 18px;
+		font-size: 12px;
 	}
 
 	&:hover {
 		background-color: ${theme.colors.darkPrimary};
+		border: 1px solid ${theme.colors.darkPrimary};
 	}
 
 	&:active {

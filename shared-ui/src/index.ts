@@ -1,4 +1,5 @@
 export * from './lib/Buttons/index';
+export * from './lib/Buttons/IconButton/index';
 export * from './lib/Footer/index';
 export * from './lib/Forms/ComboBox';
 export * from './lib/Forms/ContactForm/index';
@@ -14,7 +15,7 @@ export * from './lib/Main/MainContent';
 export * from './lib/Menu/index';
 export * from './lib/Navigation/MenuItem/index';
 export * from './lib/styles';
+export * from './lib/Text/index';
 export * from './lib/styles/styled.d';
 export * from './lib/styles/GlobalStyle';
 export * from './lib/styles/theme';
-export * from './lib/Text';

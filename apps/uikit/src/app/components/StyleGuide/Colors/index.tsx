@@ -22,8 +22,8 @@ export const Colors = () => {
 			{Object.entries(colorScheme).map(([key, value]) => (
 				<Box
 					key={key}
-					w="106px"
-					h="106px"
+					w="90px"
+					h="90px"
 					display="flex"
 					flexDirection="column"
 					justifyContent="center"

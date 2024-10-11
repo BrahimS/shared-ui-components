@@ -391,13 +391,25 @@ export const Button = styled.button<ButtonProps>`
 	/* Variants */
 	${({ variant }) => {
 		switch (variant) {
+			case 'solid':
+				return `
+          background-color: ${theme.colors.primary};
+          color: ${theme.colors.white};
+          border: 1px solid ${theme.colors.primary};
+          &:hover {
+            background-color: ${theme.colors.darkPrimary};
+            border: 1px solid ${theme.colors.darkPrimary};
+            color: white;
+          }
+        `;
 			case 'outlined':
 				return `
           background-color: transparent;
           color: ${theme.colors.primary};
           border: 1px solid ${theme.colors.primary};
           &:hover {
-            background-color: ${theme.colors.primary};
+            background-color: ${theme.colors.darkPrimary};
+            border: 1px solid ${theme.colors.darkPrimary};
             color: white;
           }
         `;
@@ -405,9 +417,12 @@ export const Button = styled.button<ButtonProps>`
 				return `
           background-color: transparent;
           color: ${theme.colors.primary};
+          border: none;
           &:hover {
-            background-color: ${theme.colors.primary};
+            background-color: ${theme.colors.darkPrimary};
+            border: 1px solid ${theme.colors.darkPrimary};
             color: white;
+            border: none;
           }
         `;
 			default:

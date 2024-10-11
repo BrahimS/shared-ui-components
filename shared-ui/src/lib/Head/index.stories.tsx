@@ -1,24 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import App from './app';
+import { Head } from './index';
 
 import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
-const meta: Meta<typeof App> = {
-	component: App,
-	title: 'App',
+const meta: Meta<typeof Head> = {
+	component: Head,
+	title: 'Head',
 };
 export default meta;
-type Story = StoryObj<typeof App>;
+type Story = StoryObj<typeof Head>;
 
 export const Primary = {
-	args: {},
+	args: {
+		title: '',
+		description: '',
+		keywords: '',
+	},
 };
 
 export const Heading: Story = {
-	args: {},
+	args: {
+		title: '',
+		description: '',
+		keywords: '',
+	},
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement);
-		expect(canvas.getByText(/UI Kit Library/gi)).toBeTruthy();
+		expect(canvas.getByText(/Welcome to Head!/gi)).toBeTruthy();
 	},
 };

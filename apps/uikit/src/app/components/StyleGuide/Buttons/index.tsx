@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
 	Box,
 	Button,
@@ -6,6 +7,10 @@ import {
 	TagText,
 	theme,
 } from '@react-monorepo/shared-ui';
+
+const ButtonStyle = {
+	marginRight: '1rem',
+};
 
 export const Buttons = () => {
 	return (
@@ -31,12 +36,27 @@ export const Buttons = () => {
 				justify="space-between"
 				gap="4"
 				align="center"
-				style={{ marginBottom: theme.spacing.sm }}
+				wrap="nowrap"
+				style={{
+					width: '100%',
+				}}
 			>
-				<Button role="button" variant="solid" color="primary" size="small">
+				<Button
+					role="button"
+					variant="solid"
+					color="primary"
+					size="small"
+					style={ButtonStyle}
+				>
 					Primary
 				</Button>
-				<Button role="button" variant="outlined" color="secondary" size="small">
+				<Button
+					role="button"
+					variant="outlined"
+					color="secondary"
+					size="small"
+					style={ButtonStyle}
+				>
 					Outlined
 				</Button>
 				<Button
@@ -45,63 +65,11 @@ export const Buttons = () => {
 					color="primary"
 					size="small"
 					disabled
+					style={ButtonStyle}
 				>
 					Disabled
 				</Button>
 				<Button role="button" variant="ghost" color="danger" size="small">
-					Ghost
-				</Button>
-			</FlexBox>
-			<FlexBox
-				display="flex"
-				direction="row"
-				justify="space-between"
-				gap="4"
-				align="center"
-				style={{ marginBottom: theme.spacing.sm }}
-			>
-				<Button role="button" variant="solid" color="secondary" size="medium">
-					Primary
-				</Button>
-				<Button variant="outlined" color="secondary" size="medium">
-					Outlined
-				</Button>
-				<Button
-					role="button"
-					variant="solid"
-					color="primary"
-					size="medium"
-					disabled
-				>
-					Disabled
-				</Button>
-				<Button role="button" variant="ghost" color="danger" size="medium">
-					Ghost
-				</Button>
-			</FlexBox>
-			<FlexBox
-				display="flex"
-				direction="row"
-				justify="space-between"
-				gap="4"
-				align="center"
-			>
-				<Button role="button" variant="solid" color="secondary" size="large">
-					Primary
-				</Button>
-				<Button role="button" variant="outlined" color="secondary" size="large">
-					Outlined
-				</Button>
-				<Button
-					role="button"
-					variant="solid"
-					color="primary"
-					size="large"
-					disabled
-				>
-					Disabled
-				</Button>
-				<Button role="button" variant="ghost" color="danger" size="large">
 					Ghost
 				</Button>
 			</FlexBox>

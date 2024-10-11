@@ -54,7 +54,6 @@ jobs:
         run: |
           npx nx affected:build --parallel=3 --base=origin/main --skip-nx-cache
 
-  # Optional: Add a job to check for dependency updates
   dependabot:
     name: 'Dependabot'
     needs: [main]

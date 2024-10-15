@@ -51,6 +51,7 @@
 		"@radix-ui/react-popover": "^1.1.1",
 		"@radix-ui/react-select": "^2.1.2",
 		"@radix-ui/themes": "^3.1.4",
+		"@storybook/addon-actions": "^8.3.5",
 		"@storybook/addon-essentials": "8.3.4",
 		"@storybook/addon-interactions": "^8.2.8",
 		"@storybook/addon-storysource": "^8.3.5",

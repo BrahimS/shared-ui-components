@@ -15,6 +15,7 @@ export * from './lib/Main/MainContent';
 export * from './lib/Menu/index';
 export * from './lib/Navigation/MenuItem/index';
 export * from './lib/styles';
+export * from './lib/styles/utiles/index';
 export * from './lib/Text/index';
 export * from './lib/styles/styled.d';
 export * from './lib/styles/GlobalStyle';

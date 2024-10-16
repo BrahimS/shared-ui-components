@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from './theme';
+import { color, typography } from './styles';
 
 export const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -63,45 +63,96 @@ export const GlobalStyle = createGlobalStyle`
   }
 
  body {
-   background-color: ${theme.colors.background};
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-    height: 100vh;
-    overflow-y: scroll;
-	  overflow-x: hidden;
-    scroll-behavior: smooth;
-   color: ${theme.colors.text.primary};
-   font-weight: ${theme.typography.fontWeight.regular};
-   line-height: ${theme.typography.lineHeight.body};
-   font-size: ${theme.typography.fontSize.body};
-   font-family: 'Poppins', sans-serif;
+	font-family: ${typography.type.primary};
+	font-size: ${typography.size.s3}px;
+	color: ${color.darkest};
+
+	margin: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+	-webkit-overflow-scrolling: touch;
+
+	* {
+		box-sizing: border-box;
+	}
   }
 
-  h1, h2, h3, h4, h5 {
-    font-weight: ${theme.typography.fontWeight.bold};
-    line-height: ${theme.typography.lineHeight.heading};
-    color: ${theme.colors.text.primary};
-    font-family: ${theme.typography.fontFamily};
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: ${typography.weight.regular};
+		margin: 0;
+		padding: 0;
+	}
 
+button,
+	input,
+	textarea,
+	select {
+		font-family: ${typography.type.primary};
+	}
 
-  }
+	sub,
+	sup {
+		font-size: 0.8em;
+	}
 
-  h1 {
-    font-size: ${theme.typography.fontSize.h1};
-  }
-  h2 {
-    font-size: ${theme.typography.fontSize.h2};
-  }
-  h3 {
-    font-size: ${theme.typography.fontSize.h3};
-  }
-  h4 {
-    font-size: ${theme.typography.fontSize.h4};
-  }
-  h5 {
-    font-size: ${theme.typography.fontSize.h5};
-  }
-  p{
-    color: ${theme.colors.text.primary};
-    font-size: ${theme.typography.fontSize.body};}
+	sub {
+		bottom: -0.2em;
+	}
+
+	sup {
+		top: -0.2em;
+	}
+
+	b,
+	em {
+		font-weight: ${typography.weight.bold};
+	}
+
+	em {
+		font-style: normal;
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid ${color.border};
+		clear: both;
+		margin-bottom: 1.25rem;
+	}
+
+	code,
+	pre {
+		font-family: ${typography.type.code};
+		font-size: ${typography.size.s2 - 1}px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	code {
+		display: inline-block;
+		padding-left: 2px;
+		padding-right: 2px;
+		vertical-align: baseline;
+		color: ${color.secondary};
+	}
+
+	pre {
+		line-height: 18px;
+		padding: 11px 1rem;
+		white-space: pre-wrap;
+		background: rgba(0, 0, 0, 0.05);
+		color: ${color.darkest};
+		border-radius: 3px;
+		margin: 1rem 0;
+	}
+
 `;

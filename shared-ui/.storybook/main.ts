@@ -5,6 +5,7 @@ const config: StorybookConfig = {
 	addons: [
 		'@storybook/addon-essentials',
 		'@storybook/addon-storysource',
+		'@storybook/addon-actions',
 		'@storybook/addon-interactions',
 	],
 	framework: {

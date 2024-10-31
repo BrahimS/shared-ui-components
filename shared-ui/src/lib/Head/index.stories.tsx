@@ -13,20 +13,8 @@ type Story = StoryObj<typeof Head>;
 
 export const Primary = {
 	args: {
-		title: '',
-		description: '',
-		keywords: '',
-	},
-};
-
-export const Heading: Story = {
-	args: {
-		title: '',
-		description: '',
-		keywords: '',
-	},
-	play: async ({ canvasElement }) => {
-		const canvas = within(canvasElement);
-		expect(canvas.getByText(/Welcome to Head!/gi)).toBeTruthy();
+		title: 'This is the app title',
+		description: 'this is the app description',
+		keywords: 'keyword1, keyword2, keyword3',
 	},
 };

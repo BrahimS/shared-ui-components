@@ -2,7 +2,7 @@ import React from 'react';
 import { ContainerWrapper, ContainerWrapperProps } from '../styles';
 
 export const Container = ({
-	size,
+	size = 'xl',
 	padding,
 	children,
 	style,

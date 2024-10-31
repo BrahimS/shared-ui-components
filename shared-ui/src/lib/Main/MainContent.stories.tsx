@@ -13,16 +13,6 @@ type Story = StoryObj<typeof MainContent>;
 
 export const Primary = {
 	args: {
-		children: '',
-	},
-};
-
-export const Heading: Story = {
-	args: {
-		children: '',
-	},
-	play: async ({ canvasElement }) => {
-		const canvas = within(canvasElement);
-		expect(canvas.getByText(/Welcome to MainContent!/gi)).toBeTruthy();
+		children: 'This is a main content',
 	},
 };

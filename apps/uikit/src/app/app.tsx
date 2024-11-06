@@ -7,7 +7,6 @@ import { Layout } from './components/Layout';
 import ProdutCard from './pages/ProdutCard';
 import LoginForm from './pages/LoginForm';
 import NoMatch from './pages/NoMatch';
-import Styleguide from './pages/Styleguide';
 
 function App(): React.ReactNode {
 	return (
@@ -15,7 +14,6 @@ function App(): React.ReactNode {
 			<GlobalStyle />
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route path="/" element={<Styleguide />} />
 					<Route path="/login-form" element={<LoginForm />} />
 					<Route path="/product-card" element={<ProdutCard />} />
 					<Route path="*" element={<NoMatch />} />

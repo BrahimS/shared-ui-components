@@ -1,4 +1,4 @@
-import { Button } from '../../styles';
+import { StyledButton } from '../../styles';
 import { theme } from '../../styles/theme';
 
 interface SocialLoginButtonProps {
@@ -11,7 +11,7 @@ export const SocialLoginButton = ({
 	children,
 	...props
 }: SocialLoginButtonProps) => (
-	<Button
+	<StyledButton
 		variant="outlined"
 		style={{
 			color: theme.colors.text.primary,
@@ -24,5 +24,5 @@ export const SocialLoginButton = ({
 	>
 		<div style={{ marginRight: theme.spacing.xs }}>{icon}</div>
 		{children}
-	</Button>
+	</StyledButton>
 );

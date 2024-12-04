@@ -1,11 +1,10 @@
 import React from 'react';
-import * as Form from '@radix-ui/react-form';
-import { Button } from '../styles';
+import { StyledButton } from '../styles';
 
-export const SubmitButton = ({ children }: { children: string }) => {
-	return (
-		<Form.Submit asChild>
-			<Button type="submit">{children}</Button>
-		</Form.Submit>
-	);
+interface ButtonProps {
+	children: React.ReactNode;
+}
+
+export const Button = (children: React.ReactNode) => {
+	return <StyledButton>{children}</StyledButton>;
 };

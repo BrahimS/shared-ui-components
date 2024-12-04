@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "nx serve",
+		"start": "nx serve uikit",
 		"start:uikit": "nx serve uikit",
 		"build": "nx build",
 		"uikit:build": "nx build uikit",

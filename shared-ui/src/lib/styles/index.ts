@@ -39,6 +39,7 @@ export interface ButtonProps
 	variant?: 'solid' | 'outlined' | 'ghost';
 	disabled?: boolean;
 	role?: string;
+	icon?: React.ReactNode;
 }
 export const mediaQueries = {
 	mobile: `@media (max-width: ${theme.breakpoints.mobile})`,
@@ -341,7 +342,7 @@ export const MenubarTriggerWrapper = styled(Menubar.Trigger)`
 	}
 `;
 
-export const Button = styled.button<ButtonProps>`
+export const StyledButton = styled.button<ButtonProps>`
 	/* Base styles */
 	display: inline-flex;
 	align-items: center;

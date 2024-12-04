@@ -8,7 +8,7 @@ import { Heading } from '../../Headings';
 import { Link } from 'react-router-dom';
 import { SocialLoginButton } from '../../Buttons/IconButton';
 
-export const LoginFormC = () => {
+export const LoginFormDark = () => {
 	return (
 		<Box
 			display="flex"
@@ -21,10 +21,20 @@ export const LoginFormC = () => {
 			m={`0 ${theme.spacing.lg}`}
 			as={'div'}
 			asChild={false}
+			style={{
+				color: theme.colors.white,
+			}}
 		>
-			<Heading as="h4">Sign in to Yellow</Heading>
+			<Heading
+				as="h4"
+				style={{
+					color: theme.colors.text.secondary,
+				}}
+			>
+				Sign in to Yellow
+			</Heading>
 			<ContactForm
-				style={{ width: '100%' }}
+				style={{ width: '100%', color: theme.colors.text.secondary }}
 				fields={[
 					{ name: 'email', label: 'Email', type: 'text', required: true },
 					{
@@ -51,7 +61,8 @@ export const LoginFormC = () => {
 						padding: `0 ${theme.spacing.sm}`,
 						display: 'inline-block',
 						textAlign: 'center',
-						backgroundColor: theme.colors.white,
+						backgroundColor: theme.colors.black,
+						color: theme.colors.text.secondary,
 						fontWeight: theme.typography.fontWeight.medium,
 						fontSize: theme.typography.fontSize.small,
 						zIndex: 1,
@@ -63,6 +74,7 @@ export const LoginFormC = () => {
 					style={{
 						width: '100%',
 						backgroundColor: theme.colors.ligthGrey,
+						color: theme.colors.text.secondary,
 						height: '1px',
 						position: 'relative',
 						top: '-40px',

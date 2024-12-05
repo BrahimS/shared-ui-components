@@ -24,51 +24,59 @@ A scalable and reusable component library for e-commerce applications, built wit
 
 ### 📋 Prerequisites
 - **Node.js** (>= 14.x)
-- **Nx CLI**: Install with `npm install -g nx`.
+- **Nx CLI**: Install with
+   ```bash 
+  `npm install -g nx`
+    ```
 
 ### 🛠️ Installation
 1. Clone the repository:
    ```bash
    git clone https://github.com/BrahimS/e-comerce-uikit.git
    cd e-comerce-uikit
+    ```
+   
 Install dependencies:
-bash
-Copy code
-npm install
+ ```bash
+  npm install
+ ```
+
 🛠️ Usage
 🖥️ Development Server
 Run a development server for a specific app:
 
-bash
-Copy code
+ ```bash
 npx nx serve [app-name]
+ ```
+
 📦 Build Applications
 Build an app for production:
 
-bash
-Copy code
+ ```bash
 npx nx build [app-name]
+ ```
 🧪 Run Tests
 Execute tests for a project:
 
-bash
-Copy code
+ ```bash
 npx nx test [project-name]
+ ```
 📖 Storybook
 Launch Storybook to visualize and test components in isolation:
 
-bash
-Copy code
+ ```bash
 npx nx storybook shared-ui
+ ```
+
 🧪 Cypress Testing
 Run Cypress for end-to-end tests:
 
-bash
-Copy code
+ ```bash
 npx nx e2e [project-name]
+ ```
+
 📂 Project Structure
-plaintext
-Copy code
+
 apps/
   admin/         # Admin dashboard app
   storefront/    # Customer-facing e-commerce app
@@ -80,6 +88,7 @@ libs/
 storybook/       # Storybook configuration
 
 e2e/             # Cypress end-to-end tests
+
 🧩 Radix UI and Custom Components
 Built using Radix UI for accessibility and extensibility.
 Create custom components or extend existing ones to fit project-specific needs.
@@ -97,17 +106,19 @@ We welcome contributions! Follow these steps to contribute:
 
 Fork the repository.
 Create a feature branch:
-bash
-Copy code
+ ```bash
 git checkout -b feature/your-feature-name
+ ```
 Commit your changes:
-bash
-Copy code
+ ```bash
 git commit -m "Describe your changes"
+ ```
+
 Push the branch:
-bash
-Copy code
+ ```bash
 git push origin feature/your-feature-name
+ ```
+
 Open a pull request.
 📜 License
 This project is licensed under the MIT License.

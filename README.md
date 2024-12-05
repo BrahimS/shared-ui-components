@@ -123,5 +123,3 @@ Open a pull request.
 📜 License
 This project is licensed under the MIT License.
 
-🙌 Acknowledgments
-Thanks to all contributors and open-source projects that make this repository possible! 💙

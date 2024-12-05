@@ -76,7 +76,7 @@ npx nx e2e [project-name]
  ```
 
 📂 Project Structure
-
+```strudcture
 apps/
   admin/         # Admin dashboard app
   storefront/    # Customer-facing e-commerce app
@@ -88,6 +88,7 @@ libs/
 storybook/       # Storybook configuration
 
 e2e/             # Cypress end-to-end tests
+ ```
 
 🧩 Radix UI and Custom Components
 Built using Radix UI for accessibility and extensibility.

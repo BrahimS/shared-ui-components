@@ -8,14 +8,16 @@ interface ProductCardProps {
 	imageUrl: string;
 	description?: string;
 	onAddToCart?: () => void;
+	variant?: 'light' | 'dark';
 }
 
-const Card = styled.article`
+const Card = styled.article<{ variant?: 'light' | 'dark' }>`
 	max-width: 24rem;
 	border-radius: 0.5rem;
 	overflow: hidden;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	background-color: white;
+	background-color: ${({ variant }) =>
+		variant === 'dark' ? '#1a202c' : 'white'};
 `;
 
 const ProductImage = styled.img`
@@ -28,20 +30,21 @@ const ContentWrapper = styled.div`
 	padding: 1.5rem;
 `;
 
-const Title = styled.h2`
+const Title = styled.h2<{ variant?: 'light' | 'dark' }>`
 	font-size: 1.25rem;
 	font-weight: bold;
 	margin-bottom: 0.5rem;
+	color: ${({ variant }) => (variant === 'dark' ? 'white' : 'inherit')};
 `;
 
-const Description = styled.p`
-	color: #4a5568;
+const Description = styled.p<{ variant?: 'light' | 'dark' }>`
+	color: ${({ variant }) => (variant === 'dark' ? '#a0aec0' : '#4a5568')};
 	font-size: 1rem;
 	margin-bottom: 0.5rem;
 `;
 
-const Price = styled.p`
-	color: #1a202c;
+const Price = styled.p<{ variant?: 'light' | 'dark' }>`
+	color: ${({ variant }) => (variant === 'dark' ? 'white' : '#1a202c')};
 	font-weight: bold;
 	font-size: 1.25rem;
 `;
@@ -72,14 +75,19 @@ export const ProductCard = ({
 	imageUrl,
 	description,
 	onAddToCart,
+	variant = 'light',
 }: ProductCardProps): React.ReactNode => {
 	return (
-		<Card>
+		<Card variant={variant}>
 			<ProductImage src={imageUrl} alt={title} loading="lazy" />
 			<ContentWrapper>
-				<Title as="h3">{title}</Title>
-				{description && <Description>{description}</Description>}
-				<Price aria-label={`Price: $${price.toFixed(2)}`}>
+				<Title as="h3" variant={variant}>
+					{title}
+				</Title>
+				{description && (
+					<Description variant={variant}>{description}</Description>
+				)}
+				<Price variant={variant} aria-label={`Price: $${price.toFixed(2)}`}>
 					${price.toFixed(2)}
 				</Price>
 			</ContentWrapper>

@@ -1,7 +1,8 @@
+import { Heading } from '@react-monorepo/shared-ui';
 import React from 'react';
 
 // Main Styleguide page
 const Styleguide: React.FC = () => {
-	return <h1>Home</h1>;
+	return <Heading as={'h1'}>Home</Heading>;
 };
 export default Styleguide;

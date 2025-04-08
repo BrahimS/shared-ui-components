@@ -1,6 +1,6 @@
 # 📦 E-Commerce UI Kit Monorepo
 
-A scalable and reusable component library for e-commerce applications, built with **React.js**, **Nx**, and **TypeScript**.
+A scalable and reusable component library, built with **React.js**, **Nx**, and **TypeScript**.
 
 ---
 
